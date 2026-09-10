@@ -1383,8 +1383,8 @@ body {
 /* Caption plates pulled to the outer corners and pushed in front of the book
    in 3D space, so the cover can no longer cut off their text. */
 @keyframes floatSlowZ {
-  0%, 100% { transform: translate3d(0, 0, 150px); }
-  50%      { transform: translate3d(0, -11px, 150px); }
+  0%, 100% { transform: translate3d(0, 0, 95px); }
+  50%      { transform: translate3d(0, -11px, 95px); }
 }
 
 .floating-badge-editorial-1,
@@ -1395,9 +1395,11 @@ body {
   white-space: nowrap;
 }
 
+/* A fixed bleed, not a percentage: on wide screens a percentage grew past the
+   viewport and the hero's overflow:hidden clipped the plate's text. */
 .floating-badge-editorial-1 {
   top: -3%;
-  right: -3%;
+  right: 0;
   left: auto;
 }
 
@@ -1411,10 +1413,15 @@ body {
   .floating-badge-editorial-2 { left: -10%; }
 }
 
+/* The plates sit at translateZ(150px) inside a 1400px perspective, so they
+   render ~12% larger than their box. Keep them off the gutter to allow for it. */
 @media (max-width: 1024px) {
-  .floating-badge-editorial-1 { right: 0; }
-  .floating-badge-editorial-2 { left: 0; }
+  .floating-badge-editorial-1 { right: 5%; }
+  .floating-badge-editorial-2 { left: 5%; }
 }
+
+/* 100vw includes the scrollbar; 100% does not. */
+#neural-canvas { width: 100%; }
 
 @media (max-width: 1024px) {
   .bloom-far,
@@ -1559,6 +1566,72 @@ body {
 /* ==========================================================================
    23. SMALL-SCREEN FIXES for blocks the base sheet never made responsive
    ========================================================================== */
+
+/* Grid and flex items default to `min-width: auto`, which lets a stubborn
+   child widen its track past the container instead of wrapping. That is what
+   pushed the book column 36px past the right gutter and made the whole page
+   read as off-centre. Let the tracks shrink; the content wraps instead. */
+.book-grid > *,
+.duel-grid > *,
+.services-grid > *,
+.authors-grid > *,
+.neurojuegos-showcase-grid > *,
+.vision-grid > *,
+.book-pillars > *,
+.game-product-cards > *,
+.footer-top > * {
+  min-width: 0;
+}
+
+@media (max-width: 680px) {
+  /* Two columns of pillar cards cannot fit a phone; stack them. */
+  .book-pillars { grid-template-columns: 1fr; }
+
+  .book-publisher-box {
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .book-publisher-box .btn { width: 100%; }
+}
+
+/* The brand lock-up would not shrink, so the burger was pushed off the
+   right edge entirely on 360px phones. */
+@media (max-width: 620px) {
+  .nav-container { gap: 0.75rem; }
+  .brand-logo { min-width: 0; gap: 0.6rem; }
+  .brand-text { min-width: 0; }
+  .brand-img { width: 38px; height: 38px; }
+
+  .brand-title {
+    font-size: 0.82rem;
+    letter-spacing: 0.045em;
+  }
+
+  .brand-subtitle {
+    font-size: 0.54rem;
+    letter-spacing: 0.2em;
+  }
+}
+
+@media (max-width: 420px) {
+  /* Wide tracking on uppercase labels overruns narrow phones. */
+  .editorial-section .btn {
+    padding: 0.9rem 1.1rem;
+    letter-spacing: 0.07em;
+    max-width: 100%;
+  }
+
+  .editorial-section .service-card .btn,
+  .editorial-section .book-publisher-box .btn { width: 100%; }
+}
+
+@media (max-width: 390px) {
+  .brand-img { width: 34px; height: 34px; }
+  .brand-title { font-size: 0.72rem; letter-spacing: 0.03em; }
+  .brand-subtitle { font-size: 0.5rem; }
+}
+
 @media (max-width: 680px) {
   .editorial-section .contact-card-wrapper { padding: 2.25rem 1.5rem; }
   .editorial-section .interactive-game-arena { padding: 2rem 1.1rem; }
@@ -1575,4 +1648,11 @@ body {
   }
 
   .editorial-section .contact-channel-item { gap: 0.75rem; }
+
+  .editorial-section .game-board {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.6rem;
+    gap: 0.6rem;
+  }
 }
