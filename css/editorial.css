@@ -1,0 +1,1578 @@
+/* ==========================================================================
+   FLORECIMIENTO CEREBRAL SIGLO XXI - LUXURY EDITORIAL THEME
+   Extends the hero + grand-quote language (warm alabaster ground, wine and
+   terracotta accents, Cormorant display serif, hairline rules, square chrome)
+   to every section below the fold.
+   Loaded AFTER style.css - overrides only, no structural changes.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. SCOPED TOKEN REMAP
+   Re-declaring the design tokens inside .editorial-section re-themes every
+   component that already consumes them, without touching the hero.
+   -------------------------------------------------------------------------- */
+.editorial-section,
+.editorial-footer {
+  --ed-cream: #faf7f2;
+  --ed-cream-tint: #f3ede4;
+  --ed-blush: #f7ece9;
+  --ed-ink: #1d0e11;
+  --ed-ink-soft: #4a3438;
+  --ed-ink-muted: #6e585c;
+  --ed-hairline: rgba(43, 23, 26, 0.14);
+  --ed-hairline-strong: rgba(43, 23, 26, 0.26);
+  --ed-terracotta: #7a1a28;
+  --ed-rose: #c4384d;
+  --ed-rose-soft: #e2586e;
+  --ed-wine: #3b0912;
+  --ed-ochre: #b8862b;
+  --ed-moss: #4f7a52;
+}
+
+.editorial-section {
+  /* Surfaces */
+  --bg-primary: #faf7f2;
+  --bg-secondary: #f3ede4;
+  --bg-tertiary: #efe6da;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fffdfa;
+  --bg-glass: rgba(255, 255, 255, 0.82);
+
+  /* Lines */
+  --border-subtle: rgba(43, 23, 26, 0.14);
+  --border-glow: rgba(196, 56, 77, 0.4);
+  --border-cyan: rgba(122, 26, 40, 0.3);
+
+  /* Accents - the neon trio remapped onto the editorial palette */
+  --color-pink: #c4384d;
+  --color-pink-glow: rgba(196, 56, 77, 0.18);
+  --color-rose: #e2586e;
+  --color-cyan: #7a1a28;
+  --color-cyan-glow: rgba(122, 26, 40, 0.16);
+  --color-purple: #8c3848;
+  --color-amber: #b8862b;
+  --color-green: #4f7a52;
+
+  /* Type */
+  --text-pure: #1d0e11;
+  --text-main: #4a3438;
+  --text-muted: #6e585c;
+  --text-dim: #94807f;
+
+  /* Depth - paper, not glow */
+  --shadow-sm: 0 3px 12px rgba(60, 20, 28, 0.05);
+  --shadow-md: 0 10px 30px rgba(60, 20, 28, 0.08);
+  --shadow-lg: 0 24px 60px rgba(60, 20, 28, 0.12);
+  --shadow-glow-pink: 0 12px 36px rgba(122, 26, 40, 0.14);
+  --shadow-glow-cyan: 0 12px 36px rgba(122, 26, 40, 0.12);
+
+  /* Editorial chrome: near-square corners everywhere */
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 3px;
+  --radius-xl: 4px;
+}
+
+/* Inverted panels (wine ground, alabaster type) */
+.editorial-section.editorial-invert {
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --bg-card-hover: rgba(255, 255, 255, 0.09);
+  --bg-secondary: #2b060c;
+  --bg-tertiary: rgba(255, 255, 255, 0.05);
+  --border-subtle: rgba(255, 255, 255, 0.16);
+
+  --color-pink: #ff8ca0;
+  --color-cyan: #ffc2cb;
+  --color-amber: #e8bd6a;
+  --color-green: #8fd0a3;
+
+  --text-pure: #ffffff;
+  --text-main: rgba(255, 244, 245, 0.9);
+  --text-muted: rgba(255, 232, 236, 0.72);
+  --text-dim: rgba(255, 225, 230, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   2. SECTION GROUNDS & PAPER GRAIN
+   -------------------------------------------------------------------------- */
+html,
+body {
+  background: #faf7f2;
+}
+
+.editorial-section {
+  padding: 7.5rem 0;
+  background: var(--ed-cream);
+  color: var(--text-main);
+  overflow: hidden;
+}
+
+.editorial-section.editorial-tint {
+  background: var(--ed-cream-tint);
+}
+
+/* Film grain, matched to the hero + quote sections */
+.editorial-section::after,
+.editorial-footer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='edn'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23edn)' opacity='0.09'/%3E%3C/svg%3E");
+}
+
+/* Wine panels: video theatre + contact */
+.editorial-section.editorial-invert {
+  color: var(--text-main);
+  background:
+    radial-gradient(ellipse 70% 60% at 78% 30%, rgba(215, 52, 78, 0.3) 0%, transparent 66%),
+    radial-gradient(circle at 15% 22%, rgba(120, 18, 30, 0.45) 0%, transparent 58%),
+    linear-gradient(180deg, #24050a 0%, #3e0a13 45%, #58101e 100%);
+}
+
+.editorial-section.editorial-invert::after {
+  opacity: 1;
+}
+
+/* Override every legacy dark gradient the base sheet paints on these sections */
+.philosophy.editorial-section,
+.services-section.editorial-section,
+.authors-section.editorial-section,
+.formulas-section.editorial-section {
+  background: var(--ed-cream);
+}
+
+.book-section.editorial-section,
+.neurojuegos-section.editorial-section {
+  background: var(--ed-cream-tint);
+}
+
+/* Hairline seam between paper sections */
+.editorial-section:not(.editorial-invert) {
+  border-top: 1px solid var(--ed-hairline);
+}
+
+/* --------------------------------------------------------------------------
+   3. SECTION HEADERS - eyebrow, serif display, right-hand standfirst, rule
+   -------------------------------------------------------------------------- */
+.editorial-section .section-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.75fr);
+  column-gap: 4rem;
+  row-gap: 0.9rem;
+  align-items: end;
+  text-align: left;
+  max-width: none;
+  margin: 0 0 4rem 0;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid var(--ed-hairline-strong);
+}
+
+.editorial-section .section-header .badge {
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 0;
+}
+
+.editorial-section .section-title {
+  grid-column: 1;
+  grid-row: 2;
+  margin-bottom: 0;
+  font-family: var(--font-editorial-serif);
+  font-weight: 500;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.04;
+  letter-spacing: 0.005em;
+  color: var(--text-pure);
+}
+
+.editorial-section .section-subtitle {
+  grid-column: 2;
+  grid-row: 2;
+  font-family: var(--font-editorial-sans);
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  padding-bottom: 0.45rem;
+}
+
+/* Accent words: solid editorial colour, never a neon gradient */
+.editorial-section .section-title span.highlight-pink,
+.editorial-section .section-title span.highlight-cyan {
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: currentColor;
+  color: var(--ed-rose);
+  font-style: italic;
+}
+
+.editorial-section.editorial-invert .section-title span.highlight-pink,
+.editorial-section.editorial-invert .section-title span.highlight-cyan {
+  color: #ff8ca0;
+}
+
+/* --------------------------------------------------------------------------
+   4. BADGES - kerned caps eyebrows, not glassy pills
+   -------------------------------------------------------------------------- */
+.editorial-section .badge {
+  padding: 0;
+  border: none;
+  background: none;
+  backdrop-filter: none;
+  border-radius: 0;
+  font-family: var(--font-editorial-sans);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--ed-terracotta);
+}
+
+.editorial-section .badge-pink { color: var(--ed-rose); }
+.editorial-section .badge-cyan { color: var(--ed-terracotta); }
+.editorial-section .badge-amber { color: var(--ed-ochre); }
+.editorial-section .badge-purple { color: #8c3848; }
+
+.editorial-section.editorial-invert .badge,
+.editorial-section .interactive-game-arena .badge {
+  color: rgba(255, 214, 221, 0.92);
+}
+
+/* Chips that genuinely need a boxed look keep one, squared */
+.editorial-section .book-meta-tags .badge {
+  padding: 0.36rem 0.85rem;
+  border: 1px solid var(--ed-hairline-strong);
+  color: var(--ed-terracotta);
+  font-size: 0.66rem;
+  letter-spacing: 0.15em;
+}
+
+/* --------------------------------------------------------------------------
+   5. BUTTONS
+   -------------------------------------------------------------------------- */
+.editorial-section .btn {
+  font-family: var(--font-editorial-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  padding: 0.95rem 2rem;
+}
+
+.editorial-section .btn-primary {
+  background: var(--ed-terracotta);
+  color: #fff6f2;
+  border-color: var(--ed-terracotta);
+  box-shadow: 0 8px 22px rgba(122, 26, 40, 0.2);
+}
+
+.editorial-section .btn-primary:hover {
+  background: var(--ed-rose);
+  border-color: var(--ed-rose);
+  color: #fff6f2;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(122, 26, 40, 0.28);
+}
+
+.editorial-section .btn-secondary,
+.editorial-section .btn-cyan {
+  background: transparent;
+  color: var(--ed-ink);
+  border: 1px solid var(--ed-hairline-strong);
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.editorial-section .btn-secondary:hover,
+.editorial-section .btn-cyan:hover {
+  background: var(--ed-ink);
+  border-color: var(--ed-ink);
+  color: var(--ed-cream);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(29, 14, 17, 0.2);
+}
+
+.editorial-section .btn-whatsapp {
+  background: #1f7a4f;
+  color: #f2fff7;
+  box-shadow: 0 8px 22px rgba(31, 122, 79, 0.25);
+}
+
+.editorial-section .btn-whatsapp:hover {
+  background: #196540;
+  color: #f2fff7;
+}
+
+/* Inverted panels: white solid + ghost outline, exactly like the hero */
+.editorial-section.editorial-invert .btn-primary,
+.editorial-section .interactive-game-arena .btn-cyan {
+  background: #ffffff;
+  color: #2b050c;
+  border-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+}
+
+.editorial-section.editorial-invert .btn-primary:hover,
+.editorial-section .interactive-game-arena .btn-cyan:hover {
+  background: #ffecf0;
+  color: #2b050c;
+  border-color: #ffecf0;
+}
+
+.editorial-section.editorial-invert .btn-secondary,
+.editorial-section.editorial-invert .btn-cyan {
+  background: rgba(0, 0, 0, 0.22);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.editorial-section.editorial-invert .btn-secondary:hover,
+.editorial-section.editorial-invert .btn-cyan:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.editorial-section.editorial-invert .btn-whatsapp {
+  background: #ffffff;
+  color: #14532d;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.editorial-section.editorial-invert .btn-whatsapp:hover {
+  background: #eafff2;
+  color: #14532d;
+}
+
+/* --------------------------------------------------------------------------
+   6. GENERIC CARD CHROME - paper cards, hairline borders, quiet lift
+   -------------------------------------------------------------------------- */
+.editorial-section .duel-card,
+.editorial-section .pillar-card,
+.editorial-section .service-card,
+.editorial-section .author-card-pedro,
+.editorial-section .vision-item,
+.editorial-section .game-item-card,
+.editorial-section .formula-card,
+.editorial-section .achievement-box,
+.editorial-section .book-publisher-box,
+.editorial-section .author-vision-wrapper,
+.editorial-section .quote-arena {
+  background: #ffffff;
+  border: 1px solid var(--ed-hairline);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.editorial-section .duel-card:hover,
+.editorial-section .pillar-card:hover,
+.editorial-section .service-card:hover,
+.editorial-section .vision-item:hover,
+.editorial-section .game-item-card:hover,
+.editorial-section .formula-card:hover {
+  background: #ffffff;
+  border-color: rgba(122, 26, 40, 0.32);
+  box-shadow: 0 18px 44px rgba(60, 20, 28, 0.11);
+  transform: translateY(-5px);
+}
+
+/* Photography keeps a soft radius, like the reference plates */
+.editorial-section img {
+  border-radius: 10px;
+}
+
+.editorial-section .duel-avatar,
+.editorial-section .author-pedro-photo {
+  border-radius: 2px !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. PHILOSOPHY - RAZON VS INSTINTO
+   -------------------------------------------------------------------------- */
+.editorial-section .duel-persona-name {
+  font-family: var(--font-editorial-serif);
+  font-weight: 600;
+  font-size: 1.7rem;
+  letter-spacing: 0.01em;
+}
+
+.editorial-section .duel-persona-role,
+.editorial-section .author-credentials {
+  font-family: var(--font-editorial-sans);
+  letter-spacing: 0.03em;
+}
+
+.editorial-section .duel-quote-box {
+  background: var(--ed-cream-tint);
+  color: var(--ed-ink-soft);
+  font-family: var(--font-editorial-serif);
+  font-size: 1.14rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.editorial-section .card-docser .duel-quote-box {
+  color: var(--ed-ink-soft);
+}
+
+.editorial-section .card-toxix .duel-quote-box {
+  background: var(--ed-blush);
+  color: #4d1b23;
+}
+
+.editorial-section .duel-traits li {
+  border-bottom: 1px solid var(--ed-hairline);
+  padding-bottom: 0.55rem;
+}
+
+.editorial-section .quote-arena {
+  background: var(--ed-cream-tint);
+  border-color: var(--ed-hairline-strong);
+  box-shadow: none;
+}
+
+.editorial-section .arena-title {
+  font-family: var(--font-editorial-serif);
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.editorial-section .arena-btn {
+  background: transparent;
+  border: 1px solid var(--ed-hairline-strong);
+  color: var(--ed-ink-soft);
+  font-family: var(--font-editorial-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.editorial-section .arena-btn.active {
+  background: var(--ed-terracotta);
+  border-color: var(--ed-terracotta);
+  color: #fff6f2;
+  box-shadow: none;
+}
+
+.editorial-section .arena-output {
+  background: #ffffff;
+  border: 1px solid var(--ed-hairline);
+}
+
+.editorial-section .arena-quote-text {
+  font-family: var(--font-editorial-serif);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.3vw, 1.75rem);
+  line-height: 1.4;
+  color: var(--ed-ink);
+}
+
+.editorial-section .arena-speaker {
+  font-family: var(--font-editorial-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   8. BOOK SECTION
+   -------------------------------------------------------------------------- */
+.editorial-section .book-heading {
+  font-family: var(--font-editorial-serif);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 4.4vw, 3.5rem);
+  line-height: 1.05;
+  color: var(--ed-ink);
+}
+
+.editorial-section .book-heading .highlight-pink {
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: currentColor;
+  color: var(--ed-rose);
+  font-style: italic;
+}
+
+.editorial-section .book-synopsis,
+.editorial-section .service-text,
+.editorial-section .author-bio-text,
+.editorial-section .vision-item-text,
+.editorial-section .game-item-fineprint {
+  color: var(--ed-ink-muted);
+}
+
+.editorial-section .book-synopsis strong,
+.editorial-section .service-text strong,
+.editorial-section .author-bio-text strong,
+.editorial-section .author-bio-text em {
+  color: var(--ed-ink);
+}
+
+.editorial-section .book-full-view,
+.editorial-section .games-poster-img,
+.editorial-section .games-poster-wrap {
+  border: 1px solid var(--ed-hairline);
+  border-radius: 10px;
+  box-shadow: 0 30px 70px rgba(60, 20, 28, 0.16);
+}
+
+.editorial-section .pillar-icon,
+.editorial-section .vision-icon,
+.editorial-section .game-item-icon,
+.editorial-section .formula-icon,
+.editorial-section .channel-icon {
+  filter: saturate(0.85);
+}
+
+.editorial-section .pillar-title,
+.editorial-section .vision-item-title,
+.editorial-section .formula-name,
+.editorial-section .game-item-content h4,
+.editorial-section .publisher-name {
+  font-family: var(--font-editorial-serif);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* AI review callout - a blush pull-quote panel */
+.editorial-section .ia-review-card {
+  background: var(--ed-blush);
+  border: 1px solid rgba(122, 26, 40, 0.22);
+}
+
+.editorial-section .ia-chip {
+  color: var(--ed-terracotta);
+  background: rgba(122, 26, 40, 0.08);
+  border-radius: 0;
+}
+
+.editorial-section .ia-stars {
+  color: var(--ed-ochre);
+}
+
+.editorial-section .ia-review-quote {
+  font-family: var(--font-editorial-serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.45;
+  color: var(--ed-ink);
+}
+
+.editorial-section .ia-review-footer {
+  border-top: 1px solid rgba(122, 26, 40, 0.18);
+  color: var(--ed-ink-muted);
+}
+
+.editorial-section .book-publisher-box {
+  background: var(--ed-cream-tint);
+  border-color: var(--ed-hairline-strong);
+  box-shadow: none;
+}
+
+/* --------------------------------------------------------------------------
+   9. SERVICES - numbered editorial entries
+   -------------------------------------------------------------------------- */
+.editorial-section .service-num {
+  font-family: var(--font-editorial-serif);
+  font-weight: 600;
+  color: rgba(122, 26, 40, 0.16);
+}
+
+.editorial-section .service-badge {
+  font-family: var(--font-editorial-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--ed-terracotta);
+}
+
+.editorial-section .service-title {
+  font-family: var(--font-editorial-serif);
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  color: var(--ed-ink);
+}
+
+.editorial-section .service-bullets li {
+  color: var(--ed-ink-muted);
+}
+
+.editorial-section .service-card-eres {
+  background: linear-gradient(140deg, var(--ed-blush) 0%, #ffffff 65%);
+  border-color: rgba(122, 26, 40, 0.24);
+}
+
+.editorial-section .service-card-eres:hover {
+  border-color: rgba(122, 26, 40, 0.45);
+  box-shadow: 0 20px 50px rgba(60, 20, 28, 0.13);
+}
+
+.editorial-section .eres-tag {
+  background: transparent;
+  color: var(--ed-terracotta);
+  border: 1px solid rgba(122, 26, 40, 0.3);
+  border-radius: 0;
+  font-family: var(--font-editorial-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+}
+
+/* --------------------------------------------------------------------------
+   10. VIDEO THEATRE (wine panel)
+   -------------------------------------------------------------------------- */
+.editorial-section .video-theater-wrapper {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5);
+}
+
+.editorial-section .video-details-card {
+  background: rgba(20, 3, 7, 0.72);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.editorial-section .video-details-info h4 {
+  font-family: var(--font-editorial-serif);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   11. AUTHORS
+   -------------------------------------------------------------------------- */
+.editorial-section .author-pedro-titles h3 {
+  font-family: var(--font-editorial-serif);
+  font-weight: 500;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  line-height: 1.08;
+  color: var(--ed-ink);
+}
+
+.editorial-section .author-alias {
+  font-family: var(--font-editorial-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--ed-terracotta);
+}
+
+.editorial-section .achievements-grid {
+  border-top: 1px solid var(--ed-hairline-strong);
+}
+
+.editorial-section .achievement-box {
+  background: var(--ed-cream-tint);
+  border-color: var(--ed-hairline);
+  box-shadow: none;
+}
+
+.editorial-section .achievement-num {
+  font-family: var(--font-editorial-serif);
+  font-weight: 700;
+  color: var(--ed-terracotta);
+}
+
+.editorial-section .achievement-label {
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Dr. Neuro Toxix keeps a wine ground - the deliberate counterpoint */
+.editorial-section .author-card-toxix {
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 15%, rgba(215, 52, 78, 0.3) 0%, transparent 70%),
+    linear-gradient(165deg, #3e0a13 0%, #24050a 100%);
+  border: 1px solid rgba(255, 140, 160, 0.28);
+  border-radius: 3px;
+  color: rgba(255, 240, 243, 0.88);
+
+  --text-pure: #ffffff;
+  --text-main: rgba(255, 244, 245, 0.9);
+  --text-muted: rgba(255, 232, 236, 0.72);
+  --color-pink: #ff8ca0;
+  --border-subtle: rgba(255, 255, 255, 0.16);
+}
+
+.editorial-section .author-card-toxix .toxix-headline {
+  font-family: var(--font-editorial-serif);
+  font-weight: 500;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  color: #ff8ca0;
+}
+
+.editorial-section .author-card-toxix .toxix-tagline {
+  font-family: var(--font-editorial-sans);
+  color: rgba(255, 228, 233, 0.75);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.editorial-section .toxix-lore-box {
+  background: rgba(0, 0, 0, 0.28);
+  border-left: 2px solid #ff8ca0;
+  color: rgba(255, 240, 243, 0.88);
+}
+
+.editorial-section .toxix-lore-box strong {
+  color: #ffffff;
+}
+
+.editorial-section .pdnt-badge {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 140, 160, 0.3);
+  border-radius: 2px;
+}
+
+.editorial-section .pdnt-badge-text {
+  color: rgba(255, 218, 226, 0.9);
+}
+
+.editorial-section .toxix-closing-note {
+  font-family: var(--font-editorial-serif);
+  font-size: 1.08rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: rgba(255, 236, 240, 0.85);
+}
+
+.editorial-section .toxix-img {
+  border: 1px solid rgba(255, 140, 160, 0.35);
+  border-radius: 8px;
+  background: #fbf5ea;
+}
+
+.editorial-section .author-vision-wrapper {
+  background: #ffffff;
+  border-color: var(--ed-hairline-strong);
+  box-shadow: none;
+}
+
+.editorial-section .vision-title {
+  font-family: var(--font-editorial-serif);
+  font-weight: 500;
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  color: var(--ed-ink);
+}
+
+.editorial-section .vision-item {
+  background: var(--ed-cream-tint);
+  box-shadow: none;
+}
+
+/* --------------------------------------------------------------------------
+   12. NEUROJUEGOS
+   -------------------------------------------------------------------------- */
+.editorial-section .games-info-heading {
+  font-family: var(--font-editorial-serif);
+  font-weight: 500;
+  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+  line-height: 1.1;
+  color: var(--ed-ink);
+}
+
+.editorial-section .games-info-col p {
+  color: var(--ed-ink-muted);
+}
+
+.editorial-section .games-info-col strong {
+  color: var(--ed-ink);
+}
+
+.editorial-section .game-item-fineprint {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--ed-ink-muted);
+}
+
+.editorial-section .game-item-icon {
+  background: rgba(184, 134, 43, 0.12);
+  color: var(--ed-ochre);
+  border-radius: 2px;
+}
+
+.editorial-section .benefit-pill {
+  color: var(--ed-ink-soft);
+  background: transparent;
+  border: 1px solid var(--ed-hairline-strong);
+  border-radius: 0;
+  font-family: var(--font-editorial-sans);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+}
+
+.editorial-section .benefit-pill::before {
+  color: var(--ed-moss);
+}
+
+/* The playable arena stays dark - a lit stage inside the paper */
+.editorial-section .interactive-game-arena {
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 12%, rgba(215, 52, 78, 0.28) 0%, transparent 68%),
+    linear-gradient(170deg, #3e0a13 0%, #1c0409 100%);
+  border: 1px solid rgba(255, 140, 160, 0.28);
+  border-radius: 4px;
+  color: rgba(255, 244, 245, 0.9);
+
+  --text-pure: #ffffff;
+  --text-main: rgba(255, 244, 245, 0.9);
+  --text-muted: rgba(255, 232, 236, 0.72);
+  --color-cyan: #ffc2cb;
+  --color-pink: #ff8ca0;
+  --color-amber: #e8bd6a;
+  --color-green: #8fd0a3;
+  --border-subtle: rgba(255, 255, 255, 0.16);
+}
+
+.editorial-section .interactive-game-arena .game-arena-header h3 {
+  font-family: var(--font-editorial-serif);
+  font-weight: 500;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  color: #ffffff;
+}
+
+.editorial-section .interactive-game-arena .game-arena-header p {
+  color: rgba(255, 232, 236, 0.75);
+}
+
+.editorial-section .score-box {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 2px;
+}
+
+.editorial-section .score-val {
+  font-family: var(--font-editorial-serif);
+  font-weight: 700;
+}
+
+.editorial-section .score-lbl {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.editorial-section .game-board {
+  background: rgba(0, 0, 0, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 3px;
+}
+
+.editorial-section #game-target-prompt {
+  font-family: var(--font-editorial-serif);
+  font-weight: 700;
+}
+
+/* Legible labels on the light quadrants */
+.editorial-section .quad-yellow,
+.editorial-section .quad-green {
+  color: rgba(28, 14, 6, 0.82);
+  text-shadow: none;
+}
+
+/* --------------------------------------------------------------------------
+   13. FORMULAS
+   -------------------------------------------------------------------------- */
+.editorial-section .formula-icon {
+  background: rgba(122, 26, 40, 0.09);
+  color: var(--ed-terracotta);
+  border-radius: 2px;
+}
+
+.editorial-section .formula-icon.icon-cyan {
+  background: rgba(122, 26, 40, 0.09);
+  color: var(--ed-terracotta);
+}
+
+.editorial-section .formula-icon.icon-amber {
+  background: rgba(184, 134, 43, 0.12);
+  color: var(--ed-ochre);
+}
+
+.editorial-section .formula-icon.icon-purple {
+  background: rgba(140, 56, 72, 0.1);
+  color: #8c3848;
+}
+
+.editorial-section .formula-name {
+  font-size: 1.35rem;
+}
+
+.editorial-section .formula-category {
+  font-family: var(--font-editorial-sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ed-terracotta);
+}
+
+.editorial-section .formula-desc {
+  color: var(--ed-ink-muted);
+}
+
+.editorial-section .formula-tag {
+  background: transparent;
+  border-top: 1px solid var(--ed-hairline);
+  border-radius: 0;
+  color: var(--ed-ink-soft);
+  font-family: var(--font-editorial-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   14. CONTACTO (wine panel)
+   -------------------------------------------------------------------------- */
+.editorial-section .contact-card-wrapper {
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+}
+
+.editorial-section .contact-info-col h3 {
+  font-family: var(--font-editorial-serif);
+  font-weight: 500;
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  line-height: 1.08;
+  color: #ffffff;
+}
+
+.editorial-section .contact-info-col p {
+  color: rgba(255, 236, 240, 0.82);
+}
+
+.editorial-section .channel-icon {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  color: #ff8ca0;
+}
+
+.editorial-section .channel-text-title {
+  font-family: var(--font-editorial-sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 214, 221, 0.85);
+}
+
+.editorial-section .channel-text-val {
+  font-family: var(--font-editorial-serif);
+  font-size: 1.08rem;
+  color: #ffffff;
+}
+
+.editorial-section .form-group label {
+  font-family: var(--font-editorial-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 222, 228, 0.8);
+}
+
+.editorial-section .form-control {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 2px;
+  color: #ffffff;
+  font-family: var(--font-editorial-sans);
+}
+
+.editorial-section .form-control::placeholder {
+  color: rgba(255, 225, 230, 0.45);
+}
+
+.editorial-section .form-control:focus {
+  border-color: #ff8ca0;
+  box-shadow: 0 0 0 3px rgba(255, 140, 160, 0.15);
+}
+
+.editorial-section select.form-control option {
+  background: #2b060c;
+  color: #ffffff;
+}
+
+/* The interest <select> sizes itself to its longest option, which blew the
+   grid track wide open on phones. Let the track shrink instead. */
+.editorial-section .contact-card-wrapper > * { min-width: 0; }
+
+.editorial-section .form-control {
+  min-width: 0;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+
+/* --------------------------------------------------------------------------
+   15. FOOTER
+   -------------------------------------------------------------------------- */
+.editorial-footer {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #2b060c 0%, #1a0308 100%);
+  border-top: 1px solid rgba(255, 140, 160, 0.2);
+  color: rgba(255, 232, 236, 0.72);
+  padding: 5rem 0 2.5rem;
+}
+
+.editorial-footer .footer-brand p {
+  color: rgba(255, 232, 236, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.editorial-footer .footer-col h5 {
+  font-family: var(--font-editorial-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 214, 221, 0.85);
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.editorial-footer .footer-links a {
+  color: rgba(255, 236, 240, 0.72);
+  font-size: 0.88rem;
+  display: inline-block;
+}
+
+.editorial-footer .footer-links a:hover {
+  color: #ff8ca0;
+}
+
+.editorial-footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 225, 230, 0.5);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+}
+
+/* --------------------------------------------------------------------------
+   16. TOAST
+   -------------------------------------------------------------------------- */
+.toast-notice {
+  background: #2b060c;
+  border: 1px solid rgba(255, 140, 160, 0.45);
+  border-radius: 2px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  color: #fff2f4;
+  font-family: var(--font-editorial-sans);
+  font-size: 0.9rem;
+}
+
+/* --------------------------------------------------------------------------
+   17. RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .editorial-section {
+    padding: 5rem 0;
+  }
+
+  .editorial-section .section-header {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .editorial-section .section-title,
+  .editorial-section .section-subtitle {
+    grid-column: 1;
+  }
+
+  .editorial-section .section-title {
+    grid-row: 2;
+  }
+
+  .editorial-section .section-subtitle {
+    grid-row: 3;
+    padding-bottom: 0;
+  }
+}
+
+/* ==========================================================================
+   18. ICON SYSTEM
+   Stroke-based inline SVG replaces every emoji. Icons inherit currentColor
+   and are sized per context.
+   ========================================================================== */
+.ico {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.14em;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.duel-traits li span.icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--ed-terracotta, #7a1a28);
+}
+
+.duel-traits li span.icon .ico { width: 1.05rem; height: 1.05rem; }
+.card-toxix .duel-traits li span.icon { color: var(--ed-rose, #c4384d); }
+
+.pillar-icon,
+.vision-icon {
+  display: flex;
+  align-items: center;
+  color: var(--ed-terracotta, #7a1a28);
+}
+
+.pillar-icon .ico,
+.vision-icon .ico {
+  width: 1.7rem;
+  height: 1.7rem;
+  stroke-width: 1.4;
+}
+
+.badge-icon {
+  display: inline-flex;
+  align-items: center;
+  color: #ff8ca0;
+}
+
+.badge-icon .ico { width: 1.15rem; height: 1.15rem; }
+
+.eres-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.eres-tag .ico { width: 0.95rem; height: 0.95rem; }
+.channel-icon .ico { width: 1.2rem; height: 1.2rem; }
+.btn .ico { width: 1.05rem; height: 1.05rem; }
+.mobile-toggle .ico { width: 1.4rem; height: 1.4rem; }
+
+.publisher-mark,
+.toast-mark {
+  display: inline-flex;
+  align-items: center;
+}
+
+.publisher-mark .ico { width: 1.55rem; height: 1.55rem; }
+.toast-mark .ico { width: 1.45rem; height: 1.45rem; color: #ff8ca0; }
+
+.pdnt-badge span.icon {
+  display: inline-flex;
+  align-items: center;
+  color: #ff8ca0;
+}
+
+.pdnt-badge span.icon .ico { width: 1.25rem; height: 1.25rem; }
+
+/* The icon boxes no longer need the emoji desaturation pass */
+.editorial-section .pillar-icon,
+.editorial-section .vision-icon,
+.editorial-section .channel-icon { filter: none; }
+
+/* ==========================================================================
+   19. BRAND LOCK-UP (navbar + footer)
+   ========================================================================== */
+.brand-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 16px rgba(0, 0, 0, 0.5));
+}
+
+.brand-img-sm { width: 40px; height: 40px; }
+.brand-logo:hover .brand-img { transform: scale(1.05); }
+
+.brand-title {
+  font-family: var(--font-editorial-serif);
+  font-size: 1.06rem;
+  font-weight: 600;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.brand-title-sm { font-size: 0.94rem; }
+.brand-bloom { color: #ff8ca0; }
+
+.brand-subtitle {
+  font-size: 0.6rem;
+  letter-spacing: 0.26em;
+  color: rgba(255, 200, 210, 0.72);
+  margin-top: 3px;
+}
+
+/* Menu a touch smaller, action button a touch roomier */
+.nav-container { gap: 2rem; }
+
+.nav-links { gap: 1.55rem; }
+
+.nav-links a {
+  font-size: 0.79rem;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+}
+
+.nav-actions .btn {
+  padding: 0.78rem 1.85rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+}
+
+.mobile-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+  .nav-container { gap: 1.25rem; }
+  .brand-title { font-size: 0.95rem; letter-spacing: 0.05em; }
+  .brand-img { width: 42px; height: 42px; }
+  .nav-links { gap: 1.15rem; }
+  .nav-links a { font-size: 0.74rem; }
+  .nav-actions .btn { padding: 0.72rem 1.35rem; font-size: 0.68rem; }
+}
+
+/* Collapse to the burger at 1000px — below that the seven links crowd the
+   brand lock-up. (The base sheet only switched at 768px.) */
+@media (max-width: 1000px) {
+  .nav-links,
+  .nav-actions .btn { display: none; }
+
+  .mobile-toggle { display: inline-flex; }
+
+  .brand-title { font-size: 1.02rem; letter-spacing: 0.07em; }
+  .brand-img { width: 46px; height: 46px; }
+
+  .nav-links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #1a0409;
+    padding: 2rem 1.5rem 2.25rem;
+    border-bottom: 1px solid rgba(255, 140, 160, 0.22);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
+    gap: 1.35rem;
+  }
+
+  .nav-links.mobile-open a {
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+  }
+
+  /* The header CTA is hidden at this width, so it reappears in the drawer. */
+  .nav-links.mobile-open .nav-cta-mobile {
+    display: block;
+    margin-top: 0.4rem;
+    padding-top: 1.35rem;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .nav-links.mobile-open .nav-cta-mobile a {
+    display: inline-block;
+    padding: 0.8rem 1.9rem;
+    background: #ffffff;
+    color: #2b050c;
+    font-family: var(--font-editorial-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .nav-links.mobile-open .nav-cta-mobile a::after { display: none; }
+}
+
+/* Drawer-only item: never shown in the horizontal bar. */
+.nav-cta-mobile { display: none; }
+
+/* ==========================================================================
+   20. HERO - BLOOMING FLORAL BACKDROP
+   The flower repeats at four depths so the cluster opens like the
+   "florecimiento" it names; the emblem sits furthest back as a watermark.
+   ========================================================================== */
+.bloom-petal,
+.bloom-emblem {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  border-radius: 0 !important;
+  will-change: transform;
+}
+
+.bloom-petal {
+  filter: drop-shadow(0 20px 45px rgba(18, 3, 8, 0.55));
+}
+
+.bloom-far {
+  width: 320px;
+  top: -22%;
+  right: -20%;
+  opacity: 0.32;
+  filter: blur(3px) drop-shadow(0 20px 40px rgba(18, 3, 8, 0.4));
+  transform: rotate(26deg) translate3d(var(--px, 0px), calc(var(--py, 0px) + var(--sy, 0px)), -190px);
+}
+
+.bloom-left {
+  width: 232px;
+  top: 8%;
+  left: -17%;
+  opacity: 0.95;
+  transform: rotate(-21deg) translate3d(var(--px, 0px), calc(var(--py, 0px) + var(--sy, 0px)), -110px);
+}
+
+.bloom-right {
+  width: 258px;
+  bottom: -12%;
+  right: -16%;
+  opacity: 0.95;
+  transform: rotate(14deg) translate3d(var(--px, 0px), calc(var(--py, 0px) + var(--sy, 0px)), -80px);
+}
+
+.bloom-top {
+  width: 146px;
+  top: -14%;
+  left: 12%;
+  opacity: 0.7;
+  transform: rotate(-9deg) translate3d(var(--px, 0px), calc(var(--py, 0px) + var(--sy, 0px)), -150px);
+}
+
+.bloom-emblem {
+  width: 430px;
+  left: 34%;
+  top: 44%;
+  opacity: 0.22;
+  filter: blur(1px);
+  transform: translate3d(calc(-50% + var(--px, 0px)), calc(-50% + var(--py, 0px)), -240px);
+}
+
+/* Caption plates pulled to the outer corners and pushed in front of the book
+   in 3D space, so the cover can no longer cut off their text. */
+@keyframes floatSlowZ {
+  0%, 100% { transform: translate3d(0, 0, 150px); }
+  50%      { transform: translate3d(0, -11px, 150px); }
+}
+
+.floating-badge-editorial-1,
+.floating-badge-editorial-2 {
+  animation-name: floatSlowZ;
+  background: rgba(26, 4, 9, 0.9);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  white-space: nowrap;
+}
+
+.floating-badge-editorial-1 {
+  top: -3%;
+  right: -3%;
+  left: auto;
+}
+
+.floating-badge-editorial-2 {
+  bottom: -7%;
+  left: -22%;
+  right: auto;
+}
+
+@media (max-width: 1200px) {
+  .floating-badge-editorial-2 { left: -10%; }
+}
+
+@media (max-width: 1024px) {
+  .floating-badge-editorial-1 { right: 0; }
+  .floating-badge-editorial-2 { left: 0; }
+}
+
+@media (max-width: 1024px) {
+  .bloom-far,
+  .bloom-top { display: none; }
+
+  .bloom-left { width: 190px; left: -4%; }
+  .bloom-right { width: 200px; right: -4%; }
+  .bloom-emblem { width: 300px; }
+
+  /* The base sheet's responsive rule is out-specified by
+     `.hero-editorial .hero-grid`, so the hero never collapsed and its
+     columns overflowed small screens. Restore the single-column stack. */
+  .hero-editorial .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* The four-up pillar strip had no responsive rule and overflowed phones. */
+@media (max-width: 900px) {
+  .pillars-strip-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pillars-strip-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 680px) {
+  .hero-editorial { padding-top: 110px; }
+
+  .hero-editorial-title {
+    font-size: clamp(2.1rem, 9vw, 3.4rem);
+  }
+
+  .hero-editorial-desc { font-size: 1rem; }
+
+  .hero-editorial-actions {
+    flex-wrap: wrap;
+    gap: 0.85rem;
+  }
+
+  .hero-editorial-actions .btn { flex: 1 1 auto; }
+
+  .hero-editorial-stats {
+    flex-wrap: wrap;
+    gap: 1.5rem 2rem;
+  }
+
+  .hero-visual-editorial,
+  .editorial-cards-cluster { min-height: 420px; height: 420px; }
+
+  .book-card-3d { width: 220px; height: 334px; }
+
+  .editorial-orbit-ring { display: none; }
+}
+
+/* ==========================================================================
+   21. BOOK SECTION - the same interactive 3D object as the hero
+   ========================================================================== */
+.book-visual-frame {
+  perspective: 1500px;
+  align-items: flex-start;
+}
+
+.book-card-3d-alt {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 31 / 47;
+  height: auto;
+  transform-style: preserve-3d;
+  transform: rotateX(3deg) rotateY(-11deg) translateZ(30px);
+  transition: transform 0.12s ease-out;
+  cursor: pointer;
+  will-change: transform;
+}
+
+.book-card-3d-alt .book-cover {
+  border: 1px solid rgba(43, 23, 26, 0.18);
+  border-radius: 6px 12px 12px 6px;
+  background: #f6f1e9;
+  box-shadow: 0 30px 70px rgba(60, 20, 28, 0.24);
+}
+
+.editorial-section .book-card-3d-alt .book-full-view {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.editorial-section .book-card-3d-alt .book-full-view:hover {
+  transform: none;
+}
+
+.book-card-3d-alt .book-spine-effect {
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(60, 30, 20, 0.28) 42%,
+      rgba(255, 255, 255, 0.22) 85%,
+      transparent 100%);
+}
+
+/* ==========================================================================
+   22. NEUROJUEGOS - real package shots instead of icons
+   ========================================================================== */
+.editorial-section .game-item-icon {
+  width: 96px;
+  height: 96px;
+  padding: 0;
+  background: #ffffff;
+  border: 1px solid var(--ed-hairline);
+  border-radius: 4px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  filter: none;
+}
+
+.editorial-section .game-item-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.editorial-section .game-item-card:hover .game-item-icon {
+  border-color: rgba(122, 26, 40, 0.35);
+}
+
+@media (max-width: 600px) {
+  .editorial-section .game-item-card { flex-direction: column; }
+  .editorial-section .game-item-icon { width: 100%; height: 160px; }
+}
+
+/* ==========================================================================
+   23. SMALL-SCREEN FIXES for blocks the base sheet never made responsive
+   ========================================================================== */
+@media (max-width: 680px) {
+  .editorial-section .contact-card-wrapper { padding: 2.25rem 1.5rem; }
+  .editorial-section .interactive-game-arena { padding: 2rem 1.1rem; }
+
+  .editorial-section .game-scoreboard {
+    gap: 0.75rem;
+    justify-content: space-between;
+  }
+
+  .editorial-section .score-box {
+    flex: 1 1 0;
+    padding: 0.75rem 0.4rem;
+    text-align: center;
+  }
+
+  .editorial-section .contact-channel-item { gap: 0.75rem; }
+}

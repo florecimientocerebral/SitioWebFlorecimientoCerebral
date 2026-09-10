@@ -1,31 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Florecimiento Cerebral Siglo XXI | docSERsol & Dr. Neuro Tóxix</title>
-  <meta name="description" content="Sitio oficial de Florecimiento Cerebral Siglo XXI. La obra revolucionaria del Dr. Pedro Hernán Pérez Estrada (docSERsol) y el Dr. Neuro Tóxix. Neurociencia integrativa, neurojuegos y despertar cognitivo.">
-  <meta name="keywords" content="Florecimiento Cerebral, Pedro Hernan Perez Estrada, docSERsol, Dr Neuro Toxix, Neurojuegos, Neurocuadricolor, Enloquezcase de la risa, Medicina Integrativa, Neurociencia Colombia, ibukku">
+  <meta name="description"
+    content="Sitio oficial de Florecimiento Cerebral Siglo XXI. La obra revolucionaria del Dr. Pedro Hernán Pérez Estrada (docSERsol) y el Dr. Neuro Tóxix. Neurociencia integrativa, neurojuegos y despertar cognitivo.">
+  <meta name="keywords"
+    content="Florecimiento Cerebral, Pedro Hernan Perez Estrada, docSERsol, Dr Neuro Toxix, Neurojuegos, Neurocuadricolor, Enloquezcase de la risa, Medicina Integrativa, Neurociencia Colombia, ibukku">
   <meta name="author" content="Pedro Hernán Pérez Estrada (docSERsol)">
 
   <!-- OpenGraph / Social Meta Tags -->
   <meta property="og:title" content="Florecimiento Cerebral Siglo XXI">
-  <meta property="og:description" content="El siglo del cerebro ha comenzado. Despierta tus capacidades mentales latentes junto a docSERsol y el Dr. Neuro Tóxix.">
+  <meta property="og:description"
+    content="El siglo del cerebro ha comenzado. Despierta tus capacidades mentales latentes junto a docSERsol y el Dr. Neuro Tóxix.">
   <meta property="og:image" content="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966809/logo.jpg">
   <meta property="og:type" content="website">
 
-  <link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966809/logo.jpg">
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788996435/logo.png">
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788996435/logo.png">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Montserrat (Modern Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/animations.css?v=5">
+  <link rel="stylesheet" href="css/editorial.css?v=1">
 </head>
+
 <body>
+
+  <!-- ==========================================================
+       INLINE SVG ICON SPRITE (replaces all emoji across the site)
+       Stroke-based, inherits currentColor.
+       ========================================================== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="i-brain"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"/></g>
+      <g id="i-book"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></g>
+      <g id="i-library"><path d="M4 3h4v18H4z"/><path d="M10 3h4v18h-4z"/><path d="m16.8 3.6 3.9 1-4.2 16.8-3.9-1"/></g>
+      <g id="i-microscope"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 0 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h4v4a2 2 0 0 1-2 2z"/><path d="M12 6V3a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v3"/></g>
+      <g id="i-leaf"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></g>
+      <g id="i-compass"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/></g>
+      <g id="i-mountain"><path d="m8 3 4 8 5-5 5 15H2z"/></g>
+      <g id="i-fossil"><path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5z"/></g>
+      <g id="i-flask"><path d="M10 2v7.31"/><path d="M14 9.3V2"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.6 16h12.8"/></g>
+      <g id="i-bolt"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></g>
+      <g id="i-masks"><path d="M15.5 4.2 22 6v6a7 7 0 0 1-3.2 5.88"/><path d="M9 20a7 7 0 0 1-7-7V6l7-2 7 2v7a7 7 0 0 1-7 7z"/><path d="M6.2 10h.01"/><path d="M11.8 10h.01"/><path d="M6.6 14.2a3.2 3.2 0 0 0 4.8 0"/></g>
+      <g id="i-palette"><path d="M12 22a10 10 0 1 1 10-10 5 5 0 0 1-5 5h-2.2a1.8 1.8 0 0 0-1.4 2.9l.3.4A1.8 1.8 0 0 1 12 22z"/><circle cx="13.5" cy="6.5" r=".9"/><circle cx="17.5" cy="10.5" r=".9"/><circle cx="6.5" cy="12.5" r=".9"/><circle cx="8.5" cy="7.5" r=".9"/></g>
+      <g id="i-spiral"><path d="M12 12.5a1.5 1.5 0 1 0 2.6 1.1c0-2-2-3.1-4.1-2.4-2.3.8-3.2 3.6-2 6s4.5 3.4 7.2 2.3c3-1.2 4.4-5 3-8.5C17.2 7.2 13 5.4 9 6.6"/></g>
+      <g id="i-lotus"><path d="M12 21c-3.4 0-8-2.6-8-7.2 2.7 0 4.8 1 5.9 2.7C10.8 13.9 12 10.8 12 7.5c0 3.3 1.2 6.4 2.1 9 1.1-1.7 3.2-2.7 5.9-2.7 0 4.6-4.6 7.2-8 7.2z"/><path d="M12 7.5C10.6 5.9 10.6 4.2 12 2.5c1.4 1.7 1.4 3.4 0 5z"/></g>
+      <g id="i-droplet"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5S12.5 5 12 2.5C11.5 5 10 7.4 8 9 6 10.6 5 12.5 5 15a7 7 0 0 0 7 7z"/></g>
+      <g id="i-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></g>
+      <g id="i-bird"><path d="M16 7h.01"/><path d="M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20"/><path d="m20 7 2 2"/><path d="M7.5 13 10 15"/></g>
+      <g id="i-sprout"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></g>
+      <g id="i-dice"><rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="8.2" cy="8.2" r=".9"/><circle cx="15.8" cy="8.2" r=".9"/><circle cx="12" cy="12" r=".9"/><circle cx="8.2" cy="15.8" r=".9"/><circle cx="15.8" cy="15.8" r=".9"/></g>
+      <g id="i-chat"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></g>
+      <g id="i-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></g>
+      <g id="i-send"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></g>
+      <g id="i-check"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="M22 4 12 14l-3-3"/></g>
+      <g id="i-menu"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></g>
+      <g id="i-whatsapp" fill="currentColor" stroke="none"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.23-.64.08-.3-.15-1.26-.47-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.66-1.6-.91-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.7.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.34M12.05 21.8a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.89-9.89 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.15 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.44c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.49-8.4"/></g>
+    </defs>
+  </svg>
 
   <!-- Neural Network Animated Particle Canvas -->
   <canvas id="neural-canvas"></canvas>
@@ -34,9 +75,10 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="#inicio" class="brand-logo" title="Florecimiento Cerebral">
-        <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966809/logo.jpg" alt="Florecimiento Cerebral Emblema" class="brand-img">
+        <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788996435/logo.png"
+          alt="Florecimiento Cerebral Emblema" class="brand-img">
         <div class="brand-text">
-          <span class="brand-title">Florecimiento Cerebral</span>
+          <span class="brand-title"><span class="brand-bloom">FLORECIMIENTO</span> CEREBRAL</span>
           <span class="brand-subtitle">Siglo XXI</span>
         </div>
       </a>
@@ -45,16 +87,16 @@
         <ul class="nav-links">
           <li><a href="#filosofia">Razón vs. Instinto</a></li>
           <li><a href="#libro">El Libro</a></li>
-          <li><a href="#video">Video</a></li>
+          <li><a href="#servicios">5 Pilares &amp; Servicios</a></li>
           <li><a href="#autores">Autores</a></li>
           <li><a href="#neurojuegos">Neurojuegos</a></li>
-          <li><a href="#formulas">Fórmulas</a></li>
+          <li class="nav-cta-mobile"><a href="#contacto">Adquirir Obra</a></li>
         </ul>
       </nav>
 
       <div class="nav-actions">
         <a href="#contacto" class="btn btn-primary">Adquirir Obra</a>
-        <button class="mobile-toggle" aria-label="Abrir menú de navegación">☰</button>
+        <button class="mobile-toggle" aria-label="Abrir menú de navegación"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-menu"></use></svg></button>
       </div>
     </div>
   </header>
@@ -63,77 +105,131 @@
     <!-- ==========================================
          HERO SECTION
          ========================================== -->
-    <section id="inicio" class="hero">
+    <!-- ==========================================
+         HERO SECTION (LUXURY EDITORIAL WITH GRAIN GRADIENT)
+         ========================================== -->
+    <section id="inicio" class="hero hero-editorial">
+      <!-- Tactile Film Granularity Overlay -->
+      <div class="grain-overlay hero-grain-overlay"></div>
+      
+      <!-- Decorative Orbital Atmosphere Rings -->
+      <div class="editorial-orbit-ring ring-outer"></div>
+      <div class="editorial-orbit-ring ring-inner"></div>
+
       <div class="container hero-grid">
         <div class="hero-content reveal">
-          <div class="badge badge-pink">
-            <span>✨</span> Neurociencia Integrativa &amp; Despertar Mental
+          <div class="hero-editorial-badge">
+            UN VIAJE HACIA LA SALUD MENTAL Y EL BIENESTAR INTEGRAL
           </div>
 
-          <h1 class="hero-headline">
-            El siglo del cerebro ha comenzado.<br>
-            <span class="gradient-text">Florecimiento Cerebral</span> Siglo XXI
+          <h1 class="hero-editorial-title">
+            <span class="title-rose-accent">FLORECIMIENTO</span><br>
+            CEREBRAL<br>
+            SIGLO XXI
           </h1>
 
-          <p class="hero-description">
-            Una apasionante neuroaventura donde la rigurosidad científica y la medicina integrativa de <strong>docSERsol</strong> colisionan con las extravagancias hedonistas del <strong>Dr. Neuro Tóxix</strong> para desbloquear las capacidades mentales latentes de la humanidad.
+          <p class="hero-editorial-desc">
+            Un enfoque moderno y profundo sobre cómo cuidar tu cerebro, potenciar tu salud mental
+            y alcanzar una vida plena en el siglo XXI. La obra cumbre del <strong>Dr. Pedro Hernán Pérez Estrada (docSERsol)</strong> y el <strong>Dr. Neuro Tóxix</strong>.
           </p>
 
-          <blockquote class="hero-quote">
-            “¡Poderoso cerebro! Nadie sabe que lo tiene hasta que lo descubre.”
-            <cite>— Dr. Neuro Tóxix (Coautor Singular &amp; Viajero en el Tiempo)</cite>
-          </blockquote>
-
-          <div class="hero-cta-group">
-            <a href="#libro" class="btn btn-primary">Descubrir el Libro</a>
-            <a href="#video" class="btn btn-secondary">
-              <span>▶</span> Ver Video Oficial
-            </a>
-            <a href="#neurojuegos" class="btn btn-cyan">
-              <span>⚡</span> Probar Neuro-Desafío
-            </a>
+          <div class="hero-editorial-actions">
+            <a href="#libro" class="btn btn-editorial-white">Comprar ahora &rarr;</a>
+            <a href="#filosofia" class="btn btn-editorial-ghost">Ver más</a>
           </div>
 
-          <div class="hero-trust-bar">
-            <div class="trust-item">
-              <span class="trust-number">20+</span>
-              <span class="trust-label">Ciudades con Talleres</span>
+          <div class="hero-editorial-stats">
+            <div class="stat-pill">
+              <span class="stat-num">20+</span>
+              <span class="stat-txt">Ciudades con Talleres</span>
             </div>
-            <div class="trust-item">
-              <span class="trust-number">3</span>
-              <span class="trust-label">Diplomaturas Creadas</span>
+            <div class="stat-pill">
+              <span class="stat-num">3</span>
+              <span class="stat-txt">Diplomaturas Académicas</span>
             </div>
-            <div class="trust-item">
-              <span class="trust-number">100%</span>
-              <span class="trust-label">Diversión Cognitiva</span>
+            <div class="stat-pill">
+              <span class="stat-num">5</span>
+              <span class="stat-txt">Pilares de Transformación</span>
             </div>
           </div>
         </div>
 
-        <!-- 3D Interactive Book Showcase -->
-        <div class="hero-visual reveal reveal-delay-1">
-          <div class="book-card-3d">
-            <div class="book-cover">
-              <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966809/book_front_cover.jpg" alt="Portada de Florecimiento Cerebral Siglo XXI">
-              <div class="book-spine-effect"></div>
-              <div class="book-glare"></div>
+        <!-- 3D Interactive Book Showcase with Floating Backdrop Cards -->
+        <div class="hero-visual hero-visual-editorial reveal reveal-delay-1">
+          <div class="editorial-cards-cluster" id="cards-cluster">
+            <!-- Blooming floral backdrop: the flower repeats outward, opening
+                 behind the book like the "florecimiento" it names. -->
+            <img class="bloom-petal bloom-left" id="card-left" src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788995808/flores.png" alt="" aria-hidden="true">
+            <img class="bloom-petal bloom-right" id="card-right" src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788995808/flores.png" alt="" aria-hidden="true">
+            <img class="bloom-petal bloom-top" src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788995808/flores.png" alt="" aria-hidden="true">
+            <img class="bloom-petal bloom-far" src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788995808/flores.png" alt="" aria-hidden="true">
+            <img class="bloom-emblem" src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788996435/logo.png" alt="Emblema Florecimiento Cerebral">
+
+            <!-- The 3D Book (Prominent Interactive Motion) -->
+            <div class="book-card-3d" id="main-book-3d">
+              <div class="book-cover">
+                <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966809/book_front_cover.jpg"
+                  alt="Portada de Florecimiento Cerebral Siglo XXI">
+                <div class="book-spine-effect"></div>
+                <div class="book-glare" id="book-glare"></div>
+                <div class="book-edge-depth"></div>
+              </div>
+            </div>
+
+            <!-- Caption plates -->
+            <div class="floating-badge floating-badge-editorial-1">
+              <span class="badge-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-book"></use></svg></span>
+              <div>
+                <div class="badge-text-title">Editorial ibukku</div>
+                <div class="badge-text-sub">Edición Autorizada</div>
+              </div>
+            </div>
+
+            <div class="floating-badge floating-badge-editorial-2">
+              <span class="badge-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-brain"></use></svg></span>
+              <div>
+                <div class="badge-text-title">docSERsol &amp; Neuro Tóxix</div>
+                <div class="badge-text-sub">Neuroaventura Siglo XXI</div>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Floating Badges -->
-          <div class="floating-badge floating-badge-1">
-            <span class="badge-icon">📖</span>
-            <div>
-              <div class="badge-text-title">Editorial ibukku</div>
-              <div class="badge-text-sub">Edición Autorizada</div>
+      <!-- 4 Editorial Feature Columns (Seamlessly integrated into bottom fade) -->
+      <div class="editorial-pillars-strip reveal">
+        <div class="container">
+          <div class="pillars-strip-grid">
+            <div class="pillar-strip-item">
+              <div class="pillar-symbol">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"/></svg>
+              </div>
+              <h4 class="pillar-strip-title">CIENCIA Y BIENESTAR</h4>
+              <p class="pillar-strip-text">Una mirada actual y accesible al funcionamiento del cerebro y la salud mental.</p>
             </div>
-          </div>
 
-          <div class="floating-badge floating-badge-2">
-            <span class="badge-icon">🧠</span>
-            <div>
-              <div class="badge-text-title">docSERsol &amp; Neuro Tóxix</div>
-              <div class="badge-text-sub">Neuroaventura Siglo XXI</div>
+            <div class="pillar-strip-item">
+              <div class="pillar-symbol">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <h4 class="pillar-strip-title">HÁBITOS QUE TRANSFORMAN</h4>
+              <p class="pillar-strip-text">Estrategias prácticas para mejorar tu enfoque, energía y equilibrio emocional.</p>
+            </div>
+
+            <div class="pillar-strip-item">
+              <div class="pillar-symbol">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              </div>
+              <h4 class="pillar-strip-title">VIDA PLENA</h4>
+              <p class="pillar-strip-text">Herramientas para desarrollar tu potencial y florecer en el mundo moderno.</p>
+            </div>
+
+            <div class="pillar-strip-item">
+              <div class="pillar-symbol">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h4 class="pillar-strip-title">ENFOQUE INTEGRAL</h4>
+              <p class="pillar-strip-text">Cuerpo, mente y entorno: una visión completa para el bienestar.</p>
             </div>
           </div>
         </div>
@@ -141,15 +237,31 @@
     </section>
 
     <!-- ==========================================
+         GRAND EDITORIAL QUOTE (MATCHING REFERENCE MOCKUP)
+         ========================================== -->
+    <section class="editorial-grand-quote-section">
+      <div class="grain-overlay quote-grain-overlay"></div>
+      <div class="container quote-editorial-inner reveal">
+        <div class="editorial-delicate-line"></div>
+        <blockquote class="editorial-quote-text">
+          “¡Poderoso cerebro!<br>Nadie sabe que lo tiene hasta que lo descubre.”
+        </blockquote>
+        <div class="editorial-quote-sub">Dr. Neuro Tóxix, coautor &bull; Florecimiento Cerebral Siglo XXI</div>
+        <div class="editorial-delicate-line"></div>
+      </div>
+    </section>
+
+    <!-- ==========================================
          PHILOSOPHY SECTION: RAZÓN VS INSTINTO
          ========================================== -->
-    <section id="filosofia" class="philosophy">
+    <section id="filosofia" class="philosophy editorial-section">
       <div class="container">
         <div class="section-header reveal">
           <div class="badge badge-purple">La Gran Batalla Interior</div>
           <h2 class="section-title">¿Razón o Instinto? <span class="highlight-pink">El Duelo de Dos Mentes</span></h2>
           <p class="section-subtitle">
-            En las páginas de esta obra innovadora conviven dos perspectivas aparentemente irreconciliables. Este aparente conflicto es la clave para desbloquear una comprensión profunda de tu propia neurobiología.
+            En las páginas de esta obra innovadora conviven dos perspectivas aparentemente irreconciliables. Este
+            aparente conflicto es la clave para desbloquear una comprensión profunda de tu propia neurobiología.
           </p>
         </div>
 
@@ -158,22 +270,25 @@
           <div class="duel-card card-docser reveal reveal-delay-1">
             <div>
               <div class="duel-header">
-                <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966808/FotoDoctorPedro.jpg" alt="Foto Doctor Pedro Hernán Pérez" class="duel-avatar">
+                <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788984387/FotoDoctorPedro2.jpg"
+                  alt="Foto Doctor Pedro Hernán Pérez Estrada" class="duel-avatar">
                 <div>
                   <h3 class="duel-persona-name">docSERsol</h3>
-                  <div class="duel-persona-role">Dr. Pedro Hernán Pérez Estrada • La Voz de la Razón &amp; la Ciencia</div>
+                  <div class="duel-persona-role">Dr. Pedro Hernán Pérez Estrada • Médico Integrativo &amp; Neurocientífico
+                  </div>
                 </div>
               </div>
 
               <div class="duel-quote-box">
-                “El estudio, cuidado, desarrollo y recuperación del cerebro son la base de un futuro prometedor para la humanidad. El humano del siglo XXI desarrollará capacidades mentales latentes hacia una convivencia armónica.”
+                “El estudio, cuidado, desarrollo y recuperación del cerebro son la base indiscutible de un futuro prometedor para la humanidad. El humano del siglo XXI desarrollará o recuperará capacidades mentales latentes que le desbordarán en una convivencia armónica.”
               </div>
             </div>
 
             <ul class="duel-traits">
-              <li><span class="icon">🔬</span> Medicina Integrativa con sólida evidencia científica</li>
-              <li><span class="icon">🌿</span> Terapias de recuperación, neuroplasticidad y empatía</li>
-              <li><span class="icon">🧭</span> Guía asistencial en sanación del subconsciente</li>
+              <li><span class="icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-microscope"></use></svg></span> Medicina Integrativa con sólida evidencia neurocientífica</li>
+              <li><span class="icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-leaf"></use></svg></span> Terapias de recuperación, neuroplasticidad y empatía activa</li>
+              <li><span class="icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-compass"></use></svg></span> Guía asistencial en el proceso "El Laberinto del Subconsciente"</li>
+              <li><span class="icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mountain"></use></svg></span> Creador y facilitador del programa de Retiros ERES</li>
             </ul>
           </div>
 
@@ -181,22 +296,24 @@
           <div class="duel-card card-toxix reveal reveal-delay-2">
             <div>
               <div class="duel-header">
-                <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966808/dr_neuro_toxix.jpg" alt="Dr. Neuro Tóxix Ilustración" class="duel-avatar">
+                <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966808/dr_neuro_toxix.jpg"
+                  alt="Dr. Neuro Tóxix Ilustración" class="duel-avatar">
                 <div>
                   <h3 class="duel-persona-name">Dr. Neuro Tóxix</h3>
-                  <div class="duel-persona-role">Coautor Singular • Viajero del Tiempo &amp; El Fuego del Instinto</div>
+                  <div class="duel-persona-role">Coautor Singular • Viajero en el Tiempo &amp; El Fuego del Instinto</div>
                 </div>
               </div>
 
               <div class="duel-quote-box">
-                “Acompañado de mi pterodáctilo de Solnhofen de hace 150 millones de años y alimentado con Pterodáctilo Neuro Trofina (PDNT), ¡vengo a revolver el avispero cerebral con disertaciones hedonistas!”
+                “Con conocimientos acumulados en distintas épocas y mi pterodáctilo de Solnhofen de hace 150 millones de años, intervengo con disertaciones díscolas y recomendaciones hedonistas... ¿Será que me reivindico al final?”
               </div>
             </div>
 
             <ul class="duel-traits">
-              <li><span class="icon">🦖</span> Sabiduría acumulada en distintas eras cósmicas</li>
-              <li><span class="icon">🧪</span> Síntesis experimental de la PDNT y cambios conductuales</li>
-              <li><span class="icon">⚡</span> La antilógica del absurdo como catalizador de pensamiento</li>
+              <li><span class="icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-fossil"></use></svg></span> Fósiles de Solnhofen (Alemania) y mascota pterodáctilo</li>
+              <li><span class="icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-flask"></use></svg></span> Síntesis de la PDNT y cuestionamiento de la neurosalud rígida</li>
+              <li><span class="icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bolt"></use></svg></span> La antilógica del absurdo como catalizador de pensamiento crítico</li>
+              <li><span class="icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-masks"></use></svg></span> Humor provocador para detonar sinapsis dormidas</li>
             </ul>
           </div>
         </div>
@@ -210,9 +327,11 @@
           </div>
           <div class="arena-output">
             <p id="arena-quote-text" class="arena-quote-text">
-              “Estamos en el siglo del cerebro. Su estudio, desarrollo y sanación consciente son la base indispensable para un futuro prometedor y armónico de la humanidad.”
+              “Estamos en el siglo del cerebro. Su estudio, desarrollo y sanación consciente son la base indispensable
+              para un futuro prometedor y armónico de la humanidad.”
             </p>
-            <span id="arena-speaker" class="arena-speaker" style="color: var(--color-cyan);">docSERsol — Médico Integrativo</span>
+            <span id="arena-speaker" class="arena-speaker" style="color: var(--color-cyan);">docSERsol — Médico
+              Integrativo</span>
           </div>
         </div>
       </div>
@@ -221,11 +340,19 @@
     <!-- ==========================================
          THE BOOK SECTION
          ========================================== -->
-    <section id="libro" class="book-section">
+    <section id="libro" class="book-section editorial-section editorial-tint">
       <div class="container">
         <div class="book-grid">
-          <div class="book-visual-frame reveal">
-            <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966809/book_front_cover.jpg" alt="Libro Florecimiento Cerebral Siglo XXI" class="book-full-view">
+          <div class="book-visual-frame reveal" id="book-tilt-stage">
+            <div class="book-card-3d book-card-3d-alt" id="book-3d-libro">
+              <div class="book-cover">
+                <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966809/book_front_cover.jpg"
+                  alt="Libro Florecimiento Cerebral Siglo XXI" class="book-full-view">
+                <div class="book-spine-effect"></div>
+                <div class="book-glare" id="book-glare-libro"></div>
+                <div class="book-edge-depth"></div>
+              </div>
+            </div>
           </div>
 
           <div class="book-info-col reveal reveal-delay-1">
@@ -241,46 +368,166 @@
             </h2>
 
             <p class="book-synopsis">
-              ¿Por qué tantas personas viven atrapadas en la ansiedad, la fatiga mental y el desborde emocional cuando poseen el órgano más complejo y majestuoso del universo conocido?
+              ¿Por qué tantas personas viven atrapadas en la ansiedad, la fatiga mental y el desborde emocional cuando
+              poseen el órgano más complejo y majestuoso del universo conocido?
             </p>
             <p class="book-synopsis">
-              Esta obra no es un tratado frío ni un libro de autoayuda genérico: es un <strong>manual de viaje neurocientífico y vivencial</strong>. A través de diálogos chispeantes entre <strong>docSERsol</strong> y el disruptivo <strong>Dr. Neuro Tóxix</strong>, descubrirás cómo regenerar tus circuitos cerebrales, despertar capacidades latentes y tomar el mando definitivo de tu destino biológico y mental.
+              Esta obra no es un tratado frío ni un libro de autoayuda genérico: es un <strong>manual de viaje
+                neurocientífico y vivencial</strong>. A través de diálogos chispeantes entre <strong>docSERsol</strong>
+              y el disruptivo <strong>Dr. Neuro Tóxix</strong>, descubrirás cómo regenerar tus circuitos cerebrales,
+              despertar capacidades latentes y tomar el mando definitivo de tu destino biológico y mental.
             </p>
 
             <div class="book-pillars">
               <div class="pillar-card">
-                <div class="pillar-icon">🎨</div>
+                <div class="pillar-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-palette"></use></svg></div>
                 <div class="pillar-title">Historietas Neuronitas</div>
-                <div class="pillar-desc">Viñetas gráficas humorísticas que explican conceptos neurobiológicos de forma divertida e inolvidable.</div>
+                <div class="pillar-desc">Viñetas gráficas humorísticas que explican conceptos neurobiológicos de forma
+                  divertida e inolvidable.</div>
               </div>
 
               <div class="pillar-card">
-                <div class="pillar-icon">⚡</div>
+                <div class="pillar-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bolt"></use></svg></div>
                 <div class="pillar-title">Neuroplasticidad Viva</div>
-                <div class="pillar-desc">Herramientas prácticas para restaurar sinapsis, afinar la cognición y reconfigurar viejos condicionamientos.</div>
+                <div class="pillar-desc">Herramientas prácticas para restaurar sinapsis, afinar la cognición y
+                  reconfigurar viejos condicionamientos.</div>
               </div>
 
               <div class="pillar-card">
-                <div class="pillar-icon">🌀</div>
+                <div class="pillar-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-spiral"></use></svg></div>
                 <div class="pillar-title">Laberinto Subconsciente</div>
-                <div class="pillar-desc">Técnicas asistenciales para descifrar traumas latentes y transformar respuestas automáticas de defensa.</div>
+                <div class="pillar-desc">Técnicas asistenciales para descifrar traumas latentes y transformar respuestas
+                  automáticas de defensa.</div>
               </div>
 
               <div class="pillar-card">
-                <div class="pillar-icon">🧪</div>
+                <div class="pillar-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-flask"></use></svg></div>
                 <div class="pillar-title">Molécula PDNT &amp; Humor</div>
-                <div class="pillar-desc">El antídoto contra la rigidez mental: aprender de neurociencia riéndose a carcajadas con Dr. Neuro Tóxix.</div>
+                <div class="pillar-desc">El antídoto contra la rigidez mental: aprender de neurociencia riéndose a
+                  carcajadas con Dr. Neuro Tóxix.</div>
               </div>
             </div>
 
             <div class="book-publisher-box">
               <div class="publisher-brand">
-                <span style="font-size: 1.4rem;">📚</span>
-                <span class="publisher-name">ibukku Publishing</span>
-                <span class="publisher-badge">Editorial Oficial</span>
+                <span class="publisher-mark"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-library"></use></svg></span>
+                <div>
+                  <div class="publisher-name">Editorial ibukku</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Disponible en Edición Física &amp; Electrónica</div>
+                </div>
               </div>
-              <a href="#contacto" class="btn btn-primary">Adquirir Ejemplar</a>
+              <a href="#contacto" class="btn btn-primary">Adquirir Obra</a>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         LOS 5 PILARES & SERVICIOS (Clean & Balanced)
+         ========================================== -->
+    <section id="servicios" class="services-section editorial-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="badge badge-cyan">Ecosistema Integral</div>
+          <h2 class="section-title">Los 5 Pilares de <span class="highlight-pink">Servicios &amp; Impacto</span></h2>
+          <p class="section-subtitle">
+            Conocimiento práctico, herramientas lúdicas y acompañamiento vivencial desarrollados por el Dr. Pedro Hernán Pérez Estrada para la expansión cognitiva y la transformación integral.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Pilar 1 -->
+          <div class="service-card reveal">
+            <div class="service-num">01</div>
+            <div>
+              <div class="service-badge">Obra Editorial</div>
+              <h3 class="service-title">Libro Florecimiento Cerebral Siglo XXI</h3>
+              <p class="service-text">
+                Promoción y distribución de mi última obra en <strong>formato físico y digital</strong>. Un choque dialéctico electrizante entre la medicina integrativa de docSERsol y las extravagancias del Dr. Neuro Tóxix, apoyado divertidamente por las historietas <em>Neuronitas</em>.
+              </p>
+              <ul class="service-bullets">
+                <li>Disponible en físico y electrónico (ibukku)</li>
+                <li>Rigurosidad científica explicada con humor transformador</li>
+                <li>Manual de viaje para el despertar cognitivo</li>
+              </ul>
+            </div>
+            <a href="#libro" class="btn btn-secondary">Explorar Libro</a>
+          </div>
+
+          <!-- Pilar 2 -->
+          <div class="service-card reveal reveal-delay-1">
+            <div class="service-num">02</div>
+            <div>
+              <div class="service-badge">Estimulación Cognitiva</div>
+              <h3 class="service-title">Creación de Neurojuegos</h3>
+              <p class="service-text">
+                <strong>Neuro Cuadri Color</strong> y <strong>Enloquézcase de la Risa</strong>: elementos de estimulación y recuperación cognitiva para todas las edades y condiciones en grupos familiares, sociales, institucionales o empresariales.
+              </p>
+              <ul class="service-bullets">
+                <li>Velocidad psicomotora, reacción y control inhibitorio</li>
+                <li>Entrenamiento de funciones ejecutivas y planeación</li>
+                <li>Interacción activa y risa compartida sin pantallas</li>
+              </ul>
+            </div>
+            <a href="#neurojuegos" class="btn btn-cyan">Ver Neurojuegos</a>
+          </div>
+
+          <!-- Pilar 3 -->
+          <div class="service-card reveal reveal-delay-2">
+            <div class="service-num">03</div>
+            <div>
+              <div class="service-badge">Speaker &amp; Facilitador</div>
+              <h3 class="service-title">Conferencista y Tallerista en Neurociencia</h3>
+              <p class="service-text">
+                Servicios como conferencista —speaker— y tallerista en neurociencia aplicada para empresas, congresos, universidades y colegios. Productor y facilitador del célebre taller vivencial <strong>"Cerebro &amp; Corazón &amp; Vida"</strong> impartido en las 20 principales ciudades de Colombia y Latinoamérica.
+              </p>
+              <ul class="service-bullets">
+                <li>Conferencias magistrales de neurociencia cotidiana</li>
+                <li>Talleres vivenciales de alto impacto y cohesión</li>
+                <li>Formación y diplomaturas en neurodesarrollo</li>
+              </ul>
+            </div>
+            <a href="#contacto" class="btn btn-primary">Contratar Conferencia</a>
+          </div>
+
+          <!-- Pilar 4 -->
+          <div class="service-card reveal">
+            <div class="service-num">04</div>
+            <div>
+              <div class="service-badge">Acompañamiento Clínico</div>
+              <h3 class="service-title">Consultoría, Asistencia y Guía Personal</h3>
+              <p class="service-text">
+                Acompañamiento clínico y guía personalizada en procesos individuales donde la neurociencia aporta soluciones profundas: estrés, déficits cognitivos, ansiedad, depresión, desadaptabilidad y preparación ante retos vitales de cualquier índole.
+              </p>
+              <ul class="service-bullets">
+                <li>Consultas virtuales y presenciales personalizadas</li>
+                <li>Fórmulas magistrales cerebrales integrativas</li>
+                <li>Proceso asistencial "El Laberinto del Subconsciente"</li>
+              </ul>
+            </div>
+            <a href="#contacto" class="btn btn-secondary">Agendar Consulta</a>
+          </div>
+
+          <!-- Pilar 5 -->
+          <div class="service-card service-card-span2 service-card-eres reveal reveal-delay-1">
+            <div class="service-num">05</div>
+            <div>
+              <div class="service-badge">Inmersión Exclusiva</div>
+              <h3 class="service-title">Programa ERES — Retiro Especial de Sanación</h3>
+              <p class="service-text">
+                <strong>Espacio para un Retiro Especial de Sanación (ERES)</strong>: inmersión terapéutica entre 1 y 3 días para grupos selectos de 1 a 5 personas con intereses semejantes, guiado directamente por el Dr. Pedro Hernán Pérez Estrada para iniciar un proceso de transformación personal con nuevos recursos vitales para una existencia mejor y más productiva.
+              </p>
+              <div class="eres-modalities-grid">
+                <span class="eres-tag"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-leaf"></use></svg> ERES SALUD</span>
+                <span class="eres-tag"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-lotus"></use></svg> ERES CALMA</span>
+                <span class="eres-tag"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-droplet"></use></svg> ERES DETOX</span>
+                <span class="eres-tag"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-flame"></use></svg> ERES SXL</span>
+                <span class="eres-tag"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bird"></use></svg> ERES FREE</span>
+                <span class="eres-tag"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bolt"></use></svg> ERES POWER</span>
+              </div>
+            </div>
+            <a href="#contacto" class="btn btn-primary" style="width: fit-content;">Postular al Retiro ERES</a>
           </div>
         </div>
       </div>
@@ -289,19 +536,22 @@
     <!-- ==========================================
          VIDEO AUDITORIUM SECTION
          ========================================== -->
-    <section id="video" class="video-section">
+    <section id="video" class="video-section editorial-section editorial-invert">
       <div class="container">
         <div class="section-header reveal">
           <div class="badge badge-cyan">Producción Audiovisual Oficial</div>
           <h2 class="section-title">Adéntrate en la <span class="highlight-cyan">Neuroaventura</span></h2>
           <p class="section-subtitle">
-            Conoce de primera mano la esencia del proyecto Florecimiento Cerebral a través de nuestro video de presentación.
+            Conoce de primera mano la esencia del proyecto Florecimiento Cerebral a través de nuestro video de
+            presentación.
           </p>
         </div>
 
         <div class="video-theater-wrapper reveal reveal-delay-1">
-          <video id="project-video" class="video-element" controls poster="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966809/FlorecimientoCerebral3.jpg">
-            <source src="https://res.cloudinary.com/kaiqn1tp/video/upload/v1788966817/FlorecimientoCerebralVideo.mp4" type="video/mp4">
+          <video id="project-video" class="video-element" controls
+            poster="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966809/FlorecimientoCerebral3.jpg">
+            <source src="https://res.cloudinary.com/kaiqn1tp/video/upload/v1788966817/FlorecimientoCerebralVideo.mp4"
+              type="video/mp4">
             Tu navegador no soporta la reproducción de video en HTML5.
           </video>
           <div class="video-details-card">
@@ -318,7 +568,7 @@
     <!-- ==========================================
          AUTHORS & BIOGRAPHIES SECTION
          ========================================== -->
-    <section id="autores" class="authors-section">
+    <section id="autores" class="authors-section editorial-section">
       <div class="container">
         <div class="section-header reveal">
           <div class="badge badge-pink">Mentes Creadoras</div>
@@ -332,33 +582,34 @@
           <!-- Pedro Card -->
           <div class="author-card-pedro reveal">
             <div class="author-pedro-top">
-              <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966808/FotoDoctorPedro.jpg" alt="Pedro Hernán Pérez Estrada" class="author-pedro-photo">
+              <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788984387/FotoDoctorPedro2.jpg"
+                alt="Dr. Pedro Hernán Pérez Estrada" class="author-pedro-photo">
               <div class="author-pedro-titles">
                 <h3>Pedro Hernán Pérez Estrada</h3>
                 <div class="author-alias">docSERsol</div>
-                <div class="author-credentials">Médico Integrativo • Neurocientífico Apasionado • Docente &amp; Conferencista</div>
+                <div class="author-credentials">Médico Integrativo • Neurocientífico Aficionado &amp; Apasionado • Docente &amp; Conferencista</div>
               </div>
             </div>
 
             <p class="author-bio-text">
-              Convencido de que estamos en el siglo del cerebro y de que su estudio, cuidado, desarrollo y recuperación son la base irremplazable de un futuro armónico para la humanidad. El ser humano del siglo XXI está llamado a recuperar capacidades mentales latentes.
+              Convencido de que estamos en el siglo del cerebro y de que su estudio, cuidado, desarrollo y recuperación son la base de un futuro prometedor para la humanidad, donde el humano del siglo XXI desarrollará o recuperará capacidades mentales latentes que le desbordarán en una vida y convivencia armoniosa.
             </p>
             <p class="author-bio-text">
-              Es el creador de múltiples productos y propuestas en torno a la neurociencia aplicada: autor de tres libros, productor y facilitador del célebre taller vivencial <strong>"Cerebro &amp; Corazón &amp; Vida"</strong> impartido en las 20 principales ciudades de Colombia; productor y docente en <strong>tres diplomaturas en neurociencia</strong>; creador y guía del proceso de sanación <em>El Laberinto del Subconsciente</em>; y facilitador de <strong>ERES</strong> (Espacio para un Retiro Especial de Sanación).
+              Es creador de múltiples propuestas y desarrollos en torno a la neurociencia aplicada: autor de varios libros, cursos y seminarios; de las historietas <strong>Neuronitas</strong> que apoyan y complementan divertidamente esta obra; del <strong>Endulzante Sónico Lumínico</strong> y del <strong>Analgésico Sónico Lumínico</strong>; de los neurojuegos <em>Neuro Cuadri Color</em> y <em>Enloquézcase de la Risa</em>; de <em>Flor-Esencia Home</em>, de <em>Mascota Floral</em> y de fórmulas magistrales cerebrales; productor y docente en <strong>tres diplomaturas en neurociencia</strong>; productor y guía asistencial del proceso de sanación <em>El Laberinto del Subconsciente</em>; creador, guía y facilitador de <strong>ERES</strong> (Espacio para un Retiro Especial de Sanación); y creador del coautor de este libro: el Dr. Neuro Tóxix.
             </p>
 
             <div class="achievements-grid">
               <div class="achievement-box">
-                <div class="achievement-num">20</div>
-                <div class="achievement-label">Ciudades de Colombia con su taller vivencial</div>
+                <div class="achievement-num">20+</div>
+                <div class="achievement-label">Ciudades con su taller vivencial</div>
               </div>
               <div class="achievement-box">
                 <div class="achievement-num">3</div>
-                <div class="achievement-label">Diplomaturas académicas producidas e impartidas</div>
+                <div class="achievement-label">Diplomaturas académicas dictadas</div>
               </div>
               <div class="achievement-box">
-                <div class="achievement-num">3</div>
-                <div class="achievement-label">Obras editoriales de neurociencia aplicada</div>
+                <div class="achievement-num">6</div>
+                <div class="achievement-label">Modalidades de Retiro ERES</div>
               </div>
             </div>
           </div>
@@ -366,25 +617,71 @@
           <!-- Toxix Card -->
           <div class="author-card-toxix reveal reveal-delay-1">
             <div class="toxix-character-view">
-              <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966808/dr_neuro_toxix.jpg" alt="Dr. Neuro Tóxix" class="toxix-img">
+              <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966808/dr_neuro_toxix.jpg"
+                alt="Dr. Neuro Tóxix" class="toxix-img">
               <h3 class="toxix-headline">Dr. Neuro Tóxix</h3>
               <div class="toxix-tagline">Coautor Singular, Hedonista &amp; Viajero en el Tiempo</div>
             </div>
 
             <div class="toxix-lore-box">
-              Poseedor de inconmensurables conocimientos acumulados en distintas épocas y geografías. En una de sus expediciones a las calizas de <strong>Solnhofen (Alemania)</strong> adoptó como mascota a un pterodáctilo de hace 150 millones de años, al que inyecta su propio extracto celular para mantenerlo "medio vivo".
+              Poseedor de inconmensurables conocimientos acumulados en diferentes partes del planeta y en distintas épocas, pues dice ser además un <strong>viajero en el tiempo</strong>. En una de sus aventuras estuvo en las calizas de <strong>Solnhofen, en Alemania</strong> —famosas por sus fósiles de pterodáctilos de hace 150 millones de años— y de ahí adoptó a su mascota: un pterodáctilo momificado al que inyecta su fórmula secreta para mantenerlo en pie.
             </div>
 
             <div class="pdnt-badge">
-              <span class="icon">🧪</span>
+              <span class="icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-flask"></use></svg></span>
               <div class="pdnt-badge-text">
-                <strong>Pterodáctilo Neuro Trofina (PDNT):</strong> Sintetizada en su laboratorio privado, responsable de sus díscolas y brillantes disertaciones.
+                <strong>Pterodáctilo Neuro Trofina (PDNT):</strong> Sustancia experimental responsable de sus audaces y controversiales disertaciones.
               </div>
             </div>
 
-            <p style="font-size: 0.9rem; color: #cbd5e1; font-style: italic;">
-              Interviene en la obra en el momento menos pensado con recomendaciones excéntricas que desafían al lector a ejercitar la antilógica del absurdo.
+            <p class="toxix-closing-note">
+              Interviene en la obra en el momento menos pensado con díscolas disertaciones, aunque a veces interesantemente congruentes, pero con recomendaciones hedonistas poco neurosaludables que hay que observar con cautela. <em>¿Será que el Dr. Neuro Tóxix se reivindica al final?</em>
             </p>
+          </div>
+        </div>
+
+        <!-- Author Vision 4-Pillars Section -->
+        <div class="author-vision-wrapper reveal">
+          <div class="vision-header">
+            <div class="badge badge-purple" style="margin-bottom: 0.8rem;">Compromiso Vital</div>
+            <h3 class="vision-title">Visión del Autor</h3>
+            <p style="font-size: 0.95rem; color: var(--text-muted);">
+              Los cuatro propósitos esenciales que guían la misión médica y divulgativa del Dr. Pedro Hernán Pérez Estrada:
+            </p>
+          </div>
+
+          <div class="vision-grid">
+            <div class="vision-item">
+              <div class="vision-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-brain"></use></svg></div>
+              <h4 class="vision-item-title">Conocimiento Práctico de Vida</h4>
+              <p class="vision-item-text">
+                Ofrecer conocimientos prácticos de la neurociencia cotidiana para lidiar contra las presiones, el distrés, el agotamiento, la depresión y la angustia existencial.
+              </p>
+            </div>
+
+            <div class="vision-item">
+              <div class="vision-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sprout"></use></svg></div>
+              <h4 class="vision-item-title">Despertar Potencialidades</h4>
+              <p class="vision-item-text">
+                Enseñar las potencialidades del cerebro humano y cómo incrementarlas o recuperarlas, desde tempranas hasta avanzadas edades.
+              </p>
+            </div>
+
+            <div class="vision-item">
+              <div class="vision-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-compass"></use></svg></div>
+              <h4 class="vision-item-title">Acompañamiento en Transformación</h4>
+              <p class="vision-item-text">
+                Hacer acompañamiento y guía cercana en procesos de transformación personal hacia una existencia más armónica, plena y productiva.
+              </p>
+            </div>
+
+            <div class="vision-item">
+              <div class="vision-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-dice"></use></svg></div>
+              <h4 class="vision-item-title">Recursos Lúdico-Didácticos</h4>
+              <p class="vision-item-text">
+                Mostrar sus creaciones en neurociencia como herramientas lúdicas y didácticas aplicables en el ámbito personal, familiar, escolar o empresarial.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -393,53 +690,59 @@
     <!-- ==========================================
          NEUROJUEGOS & PLAYABLE MINI-GAME
          ========================================== -->
-    <section id="neurojuegos" class="neurojuegos-section">
+    <section id="neurojuegos" class="neurojuegos-section editorial-section editorial-tint">
       <div class="container">
         <div class="section-header reveal">
           <div class="badge badge-amber">Gimnasia Mental Familiar</div>
           <h2 class="section-title">Neurojuegos: <span class="highlight-cyan">Entrena tu Mente Riendo</span></h2>
           <p class="section-subtitle">
-            Aptos para todas las edades. Sana y entretenida diversión para tu familia, escuela o grupo de amigos con base en neuroplasticidad activa.
+            Aptos para todas las edades. Sana y entretenida diversión para tu familia, escuela o grupo de amigos con
+            base en neuroplasticidad activa.
           </p>
         </div>
 
         <div class="neurojuegos-showcase-grid">
           <div class="games-poster-wrap reveal">
-            <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966809/Neurojuegos.jpg" alt="Afiche Oficial de Neurojuegos" class="games-poster-img">
+            <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966809/Neurojuegos.jpg"
+              alt="Afiche Oficial de Neurojuegos" class="games-poster-img">
           </div>
 
           <div class="games-info-col reveal reveal-delay-1">
-            <h3 style="font-size: 1.8rem; color: #fff;">Gimnasia Sináptica sin Pantallas Pasivas</h3>
+            <h3 class="games-info-heading">Estimulación &amp; Recuperación Cognitiva Activa</h3>
             <p>
-              Desarrollados por docSERsol para romper con el sedentarismo cognitivo. Estos juegos activan redes neuronales frontales, temporales y parietales al mismo tiempo que detonan carcajadas colectivas.
+              Se catalogan como neurojuegos porque actúan como elementos de estimulación y recuperación cognitiva para <strong>todas las edades y condiciones</strong>: desde dinámicas familiares y escolares hasta programas de bienestar institucional y empresarial.
             </p>
 
             <div class="game-product-cards">
               <div class="game-item-card">
-                <div class="game-item-icon">🧩</div>
+                <div class="game-item-icon"><img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788996903/8b85abf4-962d-4372-a32e-a36260d8f7d0.png" alt="Caja del neurojuego Neuro Cuadri Color"></div>
                 <div class="game-item-content">
-                  <h4>Neuro-Cuadri-Color™</h4>
-                  <p>Un sistema de interconexión cromática que reta la flexibilidad visual, la planeación espacial y la agilidad de decisión táctica.</p>
+                  <h4>Neuro Cuadri Color™</h4>
+                  <p style="margin-bottom: 0.5rem;">Juego de fichas de colores diseñado para potenciar o recuperar las <strong>funciones mentales superiores o ejecutivas</strong>:</p>
+                  <p class="game-item-fineprint">Imaginación, anticipación, planeación, monitorización, sentido de competencia y defensa, astucia, inteligencia espacial y lógico-matemática, interpersonal, control inhibitorio, gestión del estrés y estrategia.</p>
                 </div>
               </div>
 
               <div class="game-item-card">
-                <div class="game-item-icon">🎭</div>
+                <div class="game-item-icon"><img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966809/Neurojuegos.jpg" alt="Caja del neurojuego Enloquézcase de la Risa"></div>
                 <div class="game-item-content">
                   <h4>Enloquézcase de la Risa™</h4>
-                  <p>La combinación perfecta de neuroestimulación y desinhibición cómica: libera endorfinas y dopamina fortaleciendo el lazo familiar.</p>
+                  <p style="margin-bottom: 0.5rem;">Graciosísimo juego de cartas que desafía las habilidades mentales en una sana y lúdica competencia de <strong>velocidad de reacción psicomotora</strong>:</p>
+                  <p class="game-item-fineprint">Procesamiento veloz de información, memoria a corto plazo, memoria a plazo inmediato, inhibición de respuesta y atención rápida focalizada.</p>
                 </div>
               </div>
             </div>
 
             <div class="game-benefits-grid">
-              <div class="benefit-pill">Velocidad de procesamiento</div>
-              <div class="benefit-pill">Respuesta psicomotora veloz</div>
-              <div class="benefit-pill">Planeación y astucia mental</div>
-              <div class="benefit-pill">Monitorización ejecutiva</div>
+              <div class="benefit-pill">Funciones Ejecutivas</div>
+              <div class="benefit-pill">Velocidad Psicomotora</div>
+              <div class="benefit-pill">Control Inhibitorio</div>
+              <div class="benefit-pill">Gestión del Estrés</div>
+              <div class="benefit-pill">Memoria Inmediata</div>
+              <div class="benefit-pill">Atención Rápida</div>
             </div>
 
-            <a href="#contacto" class="btn btn-primary" style="margin-top: 1rem;">Pedir Kit de Neurojuegos</a>
+            <a href="#contacto" class="btn btn-primary" style="margin-top: 1rem;">Solicitar Kit de Neurojuegos</a>
           </div>
         </div>
 
@@ -448,7 +751,8 @@
           <div class="game-arena-header">
             <div class="badge badge-cyan" style="margin-bottom: 0.8rem;">Demo Interactiva en Vivo</div>
             <h3>Neuro-Desafío de Reflejos Sinápticos</h3>
-            <p>Prueba tu velocidad de procesamiento y control inhibitorio. Haz clic rápidamente en el cuadrante del color que se te indica en pantalla.</p>
+            <p>Prueba tu velocidad de procesamiento y control inhibitorio. Haz clic rápidamente en el cuadrante del
+              color que se te indica en pantalla.</p>
           </div>
 
           <div class="game-scoreboard">
@@ -472,123 +776,24 @@
 
           <!-- Color Target Prompt -->
           <div style="min-height: 55px; margin-bottom: 1.5rem;">
-            <span id="game-target-prompt" style="font-size: 2.3rem; font-weight: 900; letter-spacing: 0.05em; transition: all 0.15s ease; display: inline-block;">
+            <span id="game-target-prompt"
+              style="font-size: 2.3rem; font-weight: 900; letter-spacing: 0.05em; transition: all 0.15s ease; display: inline-block;">
               ¿LISTO?
             </span>
           </div>
 
           <!-- 4-Quadrant Board -->
           <div class="game-board">
-            <button class="quadrant-btn quad-yellow" data-color="yellow" aria-label="Cuadrante Amarillo">AMARILLO</button>
+            <button class="quadrant-btn quad-yellow" data-color="yellow"
+              aria-label="Cuadrante Amarillo">AMARILLO</button>
             <button class="quadrant-btn quad-blue" data-color="blue" aria-label="Cuadrante Azul">AZUL</button>
             <button class="quadrant-btn quad-red" data-color="red" aria-label="Cuadrante Rojo">ROJO</button>
             <button class="quadrant-btn quad-green" data-color="green" aria-label="Cuadrante Verde">VERDE</button>
           </div>
 
           <button id="start-neurogame-btn" class="btn btn-cyan">
-            <span>⚡</span> Iniciar Neuro-Desafío
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bolt"></use></svg> Iniciar Neuro-Desafío
           </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================
-         FORMULAS & INTEGRATIVE THERAPIES SECTION
-         ========================================== -->
-    <section id="formulas" class="formulas-section">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="badge badge-purple">Bienestar Neurointegrativo</div>
-          <h2 class="section-title">Ecosistema de <span class="highlight-pink">Fórmulas &amp; Terapias</span></h2>
-          <p class="section-subtitle">
-            Complementos desarrollados por docSERsol para armonizar la fisiología cerebral, el sueño, la energía vital y la resonancia emocional.
-          </p>
-        </div>
-
-        <div class="formulas-grid">
-          <div class="formula-card reveal">
-            <div>
-              <div class="formula-header">
-                <div class="formula-icon">🧠</div>
-                <div>
-                  <h4 class="formula-name">Juventud Cerebral</h4>
-                  <span class="formula-category">Fórmula Magistral</span>
-                </div>
-              </div>
-              <p class="formula-desc">Nutrición celular especializada diseñada para optimizar la longevidad neuronal, la memoria de trabajo y la neuroplasticidad activa.</p>
-            </div>
-            <div class="formula-tag">Vitalidad &amp; Claridad Cognitiva</div>
-          </div>
-
-          <div class="formula-card reveal reveal-delay-1">
-            <div>
-              <div class="formula-header">
-                <div class="formula-icon icon-cyan">🌙</div>
-                <div>
-                  <h4 class="formula-name">Insom-NO</h4>
-                  <span class="formula-category">Fórmula Magistral</span>
-                </div>
-              </div>
-              <p class="formula-desc">Favorece la modulación de las ondas cerebrales lentas para un descanso reparador profundo y limpieza glinfática nocturna.</p>
-            </div>
-            <div class="formula-tag">Higiene del Sueño Reparador</div>
-          </div>
-
-          <div class="formula-card reveal reveal-delay-2">
-            <div>
-              <div class="formula-header">
-                <div class="formula-icon icon-amber">☀️</div>
-                <div>
-                  <h4 class="formula-name">Sin Dis3 &amp; Sin Cefalea</h4>
-                  <span class="formula-category">Equilibrio Neurovegetativo</span>
-                </div>
-              </div>
-              <p class="formula-desc">Respuestas fitoterapéuticas e integrativas para desinflamar vías vasculares craneales y regular el distrés crónico del sistema simpático.</p>
-            </div>
-            <div class="formula-tag">Alivio Natural de Tensiones</div>
-          </div>
-
-          <div class="formula-card reveal">
-            <div>
-              <div class="formula-header">
-                <div class="formula-icon icon-purple">🎵</div>
-                <div>
-                  <h4 class="formula-name">Endulzante &amp; Analgésico Sónico</h4>
-                  <span class="formula-category">Tecnología Lumínica &amp; Sonora</span>
-                </div>
-              </div>
-              <p class="formula-desc">Frecuencias acústicas y lumínicas calibradas para inducir estados de coherencia cardíaca y atenuación de dolores psicofísicos.</p>
-            </div>
-            <div class="formula-tag">Terapia de Ondas &amp; Luz</div>
-          </div>
-
-          <div class="formula-card reveal reveal-delay-1">
-            <div>
-              <div class="formula-header">
-                <div class="formula-icon">🌺</div>
-                <div>
-                  <h4 class="formula-name">Flor-Esencia &amp; Mascota Floral</h4>
-                  <span class="formula-category">Vibración Floral Sistémica</span>
-                </div>
-              </div>
-              <p class="formula-desc">Esencias florales para la armonización energética de los espacios del hogar y la contención emocional de nuestras mascotas.</p>
-            </div>
-            <div class="formula-tag">Armonía en el Hogar</div>
-          </div>
-
-          <div class="formula-card reveal reveal-delay-2">
-            <div>
-              <div class="formula-header">
-                <div class="formula-icon icon-cyan">🏞️</div>
-                <div>
-                  <h4 class="formula-name">Retiro ERES &amp; Laberinto</h4>
-                  <span class="formula-category">Experiencia Terapéutica Asistida</span>
-                </div>
-              </div>
-              <p class="formula-desc">Espacio para un Retiro Especial de Sanación: inmersión vivencial para desentrañar el subconsciente y resetear el sistema nervioso.</p>
-            </div>
-            <div class="formula-tag">Retiros Vivenciales Guiados</div>
-          </div>
         </div>
       </div>
     </section>
@@ -596,19 +801,21 @@
     <!-- ==========================================
          CONTACT & ORDER SECTION
          ========================================== -->
-    <section id="contacto" class="contact-section">
+    <section id="contacto" class="contact-section editorial-section editorial-invert">
       <div class="container">
         <div class="contact-card-wrapper reveal">
           <div class="contact-info-col">
             <div class="badge badge-pink">Contacto Directo &amp; Pedidos</div>
             <h3>Comienza tu Neuroaventura del Siglo XXI</h3>
             <p>
-              ¿Deseas adquirir el libro <em>Florecimiento Cerebral</em>, comprar los <em>Neurojuegos</em>, o invitar al Dr. Pedro Hernán Pérez Estrada a tu ciudad o institución para el taller vivencial <strong>Cerebro &amp; Corazón &amp; Vida</strong>?
+              ¿Deseas adquirir el libro <em>Florecimiento Cerebral</em>, comprar los <em>Neurojuegos</em>, o invitar al
+              Dr. Pedro Hernán Pérez Estrada a tu ciudad o institución para el taller vivencial <strong>Cerebro &amp;
+                Corazón &amp; Vida</strong>?
             </p>
 
             <div class="contact-channels">
               <div class="contact-channel-item">
-                <div class="channel-icon">💬</div>
+                <div class="channel-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"></use></svg></div>
                 <div>
                   <div class="channel-text-title">WhatsApp Oficial</div>
                   <div class="channel-text-val">Atención Personalizada para Envíos y Talleres</div>
@@ -616,7 +823,7 @@
               </div>
 
               <div class="contact-channel-item">
-                <div class="channel-icon">📖</div>
+                <div class="channel-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-book"></use></svg></div>
                 <div>
                   <div class="channel-text-title">Editorial ibukku</div>
                   <div class="channel-text-val">Distribución Nacional e Internacional</div>
@@ -624,7 +831,7 @@
               </div>
 
               <div class="contact-channel-item">
-                <div class="channel-icon">📍</div>
+                <div class="channel-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"></use></svg></div>
                 <div>
                   <div class="channel-text-title">Cobertura de Talleres</div>
                   <div class="channel-text-val">Colombia &amp; Latinoamérica</div>
@@ -633,44 +840,57 @@
             </div>
 
             <div style="margin-top: 1rem;">
-              <a href="https://wa.me/573000000000?text=Hola%20Dr.%20Pedro%20(docSERsol),%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20libro%20Florecimiento%20Cerebral%20y%20los%20Neurojuegos." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-                <span>💬</span> Contactar por WhatsApp Directo
+              <a href="https://wa.me/docSERsol?text=Hola%20Dr.%20Pedro%20(docSERsol),%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20libro%20Florecimiento%20Cerebral%20y%20los%20Neurojuegos."
+                target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"></use></svg> Contactar por WhatsApp Directo
               </a>
             </div>
           </div>
 
           <!-- Interactive Request Form -->
           <div>
-            <form id="order-contact-form" class="contact-form">
+            <!-- Netlify Forms: submissions are captured at deploy time and
+                 forwarded by email. See README for the notification setup. -->
+            <form id="order-contact-form" class="contact-form"
+              name="contacto-florecimiento" method="POST"
+              data-netlify="true" netlify-honeypot="bot-field">
+
+              <input type="hidden" name="form-name" value="contacto-florecimiento">
+
+              <p class="form-honeypot" hidden aria-hidden="true">
+                <label>No llenar: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+              </p>
+
               <div class="form-group">
                 <label for="form-name">Nombre Completo</label>
-                <input type="text" id="form-name" class="form-control" placeholder="Tu nombre" required>
+                <input type="text" id="form-name" name="nombre" class="form-control" placeholder="Tu nombre" required>
               </div>
 
               <div class="form-group">
                 <label for="form-email">Correo Electrónico</label>
-                <input type="email" id="form-email" class="form-control" placeholder="tu@correo.com" required>
+                <input type="email" id="form-email" name="email" class="form-control" placeholder="tu@correo.com" required>
               </div>
 
               <div class="form-group">
                 <label for="form-interest">Interés Principal</label>
-                <select id="form-interest" class="form-control" required>
-                  <option value="Libro Florecimiento Cerebral">Libro Florecimiento Cerebral Siglo XXI</option>
-                  <option value="Kit de Neurojuegos">Kit de Neurojuegos (NeuroCuadriColor / Enloquézcase de la Risa)</option>
-                  <option value="Taller Cerebro y Corazon y Vida">Taller Vivencial "Cerebro &amp; Corazón &amp; Vida"</option>
-                  <option value="Diplomaturas en Neurociencia">Diplomaturas y Cursos Online</option>
-                  <option value="Retiro ERES / Laberinto del Subconsciente">Retiro ERES / Sanación Subconsciente</option>
-                  <option value="Fórmulas Magistrales">Fórmulas Magistrales (Juventud Cerebral, Insom-NO, etc.)</option>
+                <select id="form-interest" name="interes" class="form-control" required>
+                  <option value="Libro Florecimiento Cerebral">Libro Florecimiento Cerebral Siglo XXI (Físico / Digital)</option>
+                  <option value="Kit de Neurojuegos">Kit de Neurojuegos (Neuro Cuadri Color &amp; Enloquézcase de la Risa)</option>
+                  <option value="Conferencista y Tallerista">Conferencias Magistrales &amp; Talleres en Neurociencia (Speaker)</option>
+                  <option value="Consulta y Acompañamiento Personal">Consulta &amp; Acompañamiento Personal (Presencial / Virtual)</option>
+                  <option value="Programa ERES Retiro">Programa ERES — Retiro Especial de Sanación (1 a 5 personas)</option>
+                  <option value="Fórmulas Magistrales y Terapias">Fórmulas Magistrales Cerebrales &amp; Terapias Sónicas</option>
                 </select>
               </div>
 
               <div class="form-group">
                 <label for="form-notes">Mensaje o Ciudad</label>
-                <textarea id="form-notes" class="form-control" placeholder="Cuéntanos tu ciudad o tus dudas sobre el proyecto..."></textarea>
+                <textarea id="form-notes" name="mensaje" class="form-control"
+                  placeholder="Cuéntanos tu ciudad, requerimientos de conferencias o dudas sobre el proyecto..."></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
-                <span>🚀</span> Enviar Solicitud
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-send"></use></svg> Enviar Solicitud
               </button>
             </form>
           </div>
@@ -680,19 +900,21 @@
   </main>
 
   <!-- Site Footer -->
-  <footer class="site-footer">
+  <footer class="site-footer editorial-footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
           <div class="brand-logo">
-            <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966809/logo.jpg" alt="Logo Florecimiento Cerebral" class="brand-img" style="width: 38px; height: 38px;">
+            <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788996435/logo.png"
+              alt="Logo Florecimiento Cerebral" class="brand-img brand-img-sm">
             <div class="brand-text">
-              <span class="brand-title" style="font-size: 1.05rem;">Florecimiento Cerebral</span>
+              <span class="brand-title brand-title-sm"><span class="brand-bloom">FLORECIMIENTO</span> CEREBRAL</span>
               <span class="brand-subtitle">Siglo XXI</span>
             </div>
           </div>
           <p>
-            El siglo del cerebro ha llegado. Desarrolla tus capacidades latentes a través de la medicina integrativa, el juego familiar y el humor transformador.
+            El siglo del cerebro ha llegado. Desarrolla tus capacidades latentes a través de la medicina integrativa, el
+            juego familiar y el humor transformador.
           </p>
         </div>
 
@@ -711,7 +933,6 @@
           <ul class="footer-links">
             <li><a href="#autores">docSERsol &amp; Neuro Tóxix</a></li>
             <li><a href="#neurojuegos">Neurojuegos</a></li>
-            <li><a href="#formulas">Fórmulas Magistrales</a></li>
             <li><a href="#contacto">Adquirir Obra</a></li>
           </ul>
         </div>
@@ -729,7 +950,8 @@
 
       <div class="footer-bottom">
         <div>
-          &copy; 2026 Florecimiento Cerebral Siglo XXI • docSERsol &amp; Dr. Pedro Hernán Pérez Estrada. Todos los derechos reservados.
+          &copy; 2026 Florecimiento Cerebral Siglo XXI • docSERsol &amp; Dr. Pedro Hernán Pérez Estrada. Todos los
+          derechos reservados.
         </div>
         <div>
           Desarrollado con estándares web modernos para GitHub &amp; Netlify.
@@ -740,7 +962,7 @@
 
   <!-- Notification Toast -->
   <div id="toast-notification" class="toast-notice">
-    <span style="font-size: 1.5rem;">🎉</span>
+    <span class="toast-mark"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"></use></svg></span>
     <span id="toast-text">Mensaje enviado con éxito.</span>
   </div>
 
@@ -748,4 +970,5 @@
   <script src="js/main.js"></script>
   <script src="js/neurogame.js"></script>
 </body>
+
 </html>

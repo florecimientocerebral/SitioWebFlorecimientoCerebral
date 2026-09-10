@@ -190,13 +190,13 @@ class NeuroGame {
     let authorQuote = '';
 
     if (this.score >= 2500) {
-      diagnosis = '🌟 NIVEL: NEUROPLASTICIDAD SUPREMA';
+      diagnosis = 'Nivel: Neuroplasticidad Suprema';
       authorQuote = 'docSERsol: "¡Asombroso! Tus circuitos neuronales exhiben una velocidad de procesamiento excepcional y control ejecutivo de élite."';
     } else if (this.score >= 1400) {
-      diagnosis = '⚡ NIVEL: SINAPSIS VELOZ';
+      diagnosis = 'Nivel: Sinapsis Veloz';
       authorQuote = 'docSERsol: "Excelente agilidad psicomotora. Con el juego continuo en NeuroCuadriColor™ desbloquearás aún más capacidades latentes."';
     } else {
-      diagnosis = '🧪 NIVEL: ESTIMULACIÓN REQUERIDA';
+      diagnosis = 'Nivel: Estimulación Requerida';
       authorQuote = 'Dr. Neuro Tóxix: "¡Caramba! Tus neuronas necesitan urgente una dosis de PDNT y una partida en familia de Enloquézcase de la Risa."';
     }
 

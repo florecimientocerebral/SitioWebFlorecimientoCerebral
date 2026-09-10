@@ -155,28 +155,125 @@ function initNavbar() {
 }
 
 /* ==========================================================================
-   3. 3D BOOK TILT EFFECT
+   3. PROMINENT 3D BOOK & EDITORIAL CARDS PARALLAX
    ========================================================================== */
-function init3DTilt() {
-  const card = document.querySelector('.book-card-3d');
-  if (!card) return;
+/**
+ * Attaches the parallax/tilt behaviour to one book stage.
+ * Used by both the hero cluster and the book section, so the two read as
+ * the same object rendered twice.
+ */
+function attachBookTilt(opts) {
+  const stage = opts.stage;
+  const card = opts.card;
+  if (!stage || !card) return;
 
-  const wrapper = card.parentElement;
+  const glare = opts.glare || null;
+  const cover = card.querySelector('.book-cover');
+  const drifters = opts.drifters ? Array.from(stage.querySelectorAll(opts.drifters)) : [];
 
-  wrapper.addEventListener('mousemove', (e) => {
-    const rect = wrapper.getBoundingClientRect();
+  const restX = opts.restX !== undefined ? opts.restX : 6;
+  const restY = opts.restY !== undefined ? opts.restY : -16;
+  const maxX = opts.maxX !== undefined ? opts.maxX : 22;
+  const maxY = opts.maxY !== undefined ? opts.maxY : 32;
+  const lift = opts.lift !== undefined ? opts.lift : 50;
+  const warmShadow = !!opts.warmShadow;
+
+  let mouseX = 0, mouseY = 0;
+  let currentRotX = restX, currentRotY = restY;
+  let targetRotX = restX, targetRotY = restY;
+  let isHovered = false;
+
+  stage.addEventListener('mousemove', (e) => {
+    isHovered = true;
+    const rect = stage.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
 
-    const rotX = -(y / (rect.height / 2)) * 14;
-    const rotY = (x / (rect.width / 2)) * 22;
+    targetRotX = -(y / (rect.height / 2)) * maxX;
+    targetRotY = (x / (rect.width / 2)) * maxY;
 
-    card.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.03)`;
+    mouseX = x;
+    mouseY = y;
   });
 
-  wrapper.addEventListener('mouseleave', () => {
-    card.style.transform = `rotateY(-18deg) rotateX(8deg) scale(1)`;
+  stage.addEventListener('mouseleave', () => {
+    isHovered = false;
+    targetRotX = restX;
+    targetRotY = restY;
+    mouseX = 0;
+    mouseY = 0;
   });
+
+  function render3D() {
+    currentRotX += (targetRotX - currentRotX) * 0.1;
+    currentRotY += (targetRotY - currentRotY) * 0.1;
+
+    card.style.transform =
+      'rotateX(' + currentRotX.toFixed(2) + 'deg) rotateY(' + currentRotY.toFixed(2) + 'deg) ' +
+      'translateZ(' + lift + 'px) scale(' + (isHovered ? 1.05 : 1) + ')';
+
+    if (cover) {
+      const shadowX = (-currentRotY * 2.2).toFixed(1);
+      const shadowY = (currentRotX * 2 + 28).toFixed(1);
+      cover.style.boxShadow = warmShadow
+        ? shadowX + 'px ' + shadowY + 'px 70px rgba(60, 20, 28, 0.28)'
+        : shadowX + 'px ' + shadowY + 'px 65px rgba(0, 0, 0, 0.82), 0 0 50px rgba(255, 60, 90, 0.3)';
+    }
+
+    if (glare) {
+      const glareAngle = Math.atan2(mouseY, mouseX) * (180 / Math.PI) + 180;
+      const glareOpacity = isHovered ? 0.38 : 0.18;
+      glare.style.background =
+        'linear-gradient(' + glareAngle + 'deg, rgba(255, 255, 255, ' + glareOpacity + ') 0%, transparent 60%)';
+    }
+
+    // Petals and emblem drift against the book, each at its own depth.
+    drifters.forEach((el, idx) => {
+      const depth = 0.03 + (idx % 4) * 0.018;
+      const dir = idx % 2 === 0 ? -1 : 1;
+      el.style.setProperty('--px', (dir * mouseX * depth).toFixed(1) + 'px');
+      el.style.setProperty('--py', (dir * mouseY * depth).toFixed(1) + 'px');
+    });
+
+    requestAnimationFrame(render3D);
+  }
+
+  render3D();
+}
+
+function init3DTilt() {
+  // Hero: the book over the blooming floral backdrop.
+  attachBookTilt({
+    stage: document.getElementById('cards-cluster'),
+    card: document.getElementById('main-book-3d'),
+    glare: document.getElementById('book-glare'),
+    drifters: '.bloom-petal, .bloom-emblem'
+  });
+
+  // Book section: the same object, calmer angles on the light ground.
+  attachBookTilt({
+    stage: document.getElementById('book-tilt-stage'),
+    card: document.getElementById('book-3d-libro'),
+    glare: document.getElementById('book-glare-libro'),
+    restX: 3,
+    restY: -11,
+    maxX: 15,
+    maxY: 24,
+    lift: 30,
+    warmShadow: true
+  });
+
+  // Gentle scroll drift on the hero bloom.
+  const petals = Array.from(document.querySelectorAll('.bloom-petal'));
+  if (petals.length) {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 900) return;
+      petals.forEach((el, idx) => {
+        el.style.setProperty('--sy', (scrollY * (idx % 2 === 0 ? 0.07 : -0.05)).toFixed(1) + 'px');
+      });
+    }, { passive: true });
+  }
 }
 
 /* ==========================================================================
@@ -255,7 +352,7 @@ function initVideoAuditorium() {
 
   // Enhance video UX
   video.addEventListener('play', () => {
-    video.style.boxShadow = '0 0 50px rgba(0, 229, 255, 0.4)';
+    video.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.55), 0 0 60px rgba(255, 140, 160, 0.25)';
   });
 
   video.addEventListener('pause', () => {
@@ -285,41 +382,76 @@ function initScrollReveal() {
 }
 
 /* ==========================================================================
-   7. CONTACT & ORDER FORM (WHATSAPP + DIRECT CONFIRMATION)
+   7. CONTACT & ORDER FORM (NETLIFY FORMS + MAILTO FALLBACK)
    ========================================================================== */
+/* Where enquiries are delivered. Netlify Forms captures the submission and
+   forwards it to this address; the mailto fallback keeps the message
+   recoverable if the POST ever fails. */
+var CONTACT_EMAIL = 'florecimientocerebral@gmail.com';
+
 function initContactForm() {
   const form = document.getElementById('order-contact-form');
   const toast = document.getElementById('toast-notification');
   const toastMsg = document.getElementById('toast-text');
+  if (!form) return;
 
-  function showToast(msg) {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const submitLabel = submitBtn ? submitBtn.innerHTML : '';
+
+  function showToast(html, ms) {
     if (!toast || !toastMsg) return;
-    toastMsg.textContent = msg;
+    toastMsg.innerHTML = html;
     toast.classList.add('show');
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 4500);
+    setTimeout(() => { toast.classList.remove('show'); }, ms || 5000);
   }
 
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const name = document.getElementById('form-name').value.trim();
-      const email = document.getElementById('form-email').value.trim();
-      const interest = document.getElementById('form-interest').value;
-      const notes = document.getElementById('form-notes').value.trim();
-
-      // Build WhatsApp message URL
-      const textMessage = `¡Hola Dr. Pedro (docSERsol)! Mi nombre es ${encodeURIComponent(name)}. Me interesa: ${encodeURIComponent(interest)}. Correo: ${encodeURIComponent(email)}. Comentario: ${encodeURIComponent(notes)}`;
-      const whatsappUrl = `https://wa.me/573000000000?text=${textMessage}`;
-
-      showToast(`¡Gracias ${name}! Tu solicitud ha sido preparada. Redirigiendo...`);
-
-      setTimeout(() => {
-        window.open(whatsappUrl, '_blank');
-        form.reset();
-      }, 1000);
-    });
+  function mailtoFor(data) {
+    const subject = 'Solicitud web: ' + (data.get('interes') || 'Florecimiento Cerebral');
+    const body =
+      'Nombre: ' + (data.get('nombre') || '') + '\n' +
+      'Correo: ' + (data.get('email') || '') + '\n' +
+      'Interés: ' + (data.get('interes') || '') + '\n\n' +
+      (data.get('mensaje') || '');
+    return 'mailto:' + CONTACT_EMAIL +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
   }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    const name = (data.get('nombre') || '').toString().trim();
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+    }
+
+    try {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString()
+      });
+
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+
+      showToast('¡Gracias' + (name ? ' ' + name : '') + '! Tu solicitud fue enviada. Te responderemos muy pronto.');
+      form.reset();
+    } catch (err) {
+      // Delivery failed (offline, or previewing outside Netlify). Offer the
+      // direct email so the enquiry is never simply lost.
+      showToast(
+        'No pudimos enviar tu solicitud. Escríbenos a ' +
+        '<a href="' + mailtoFor(data) + '">' + CONTACT_EMAIL + '</a>',
+        9000
+      );
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = submitLabel;
+      }
+    }
+  });
 }

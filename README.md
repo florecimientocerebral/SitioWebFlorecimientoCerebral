@@ -67,3 +67,75 @@ git push -u origin main
 - **Neuro-Desafío en el Navegador**: Mini-juego real inspirado en *Neuro-Cuadri-Color™* con síntesis de sonido Web Audio API, cronómetro de milisegundos, rachas y diagnóstico cerebral dinámico.
 - **Fórmulas Magistrales**: Catálogo visual interactivo de *Juventud Cerebral*, *Insom-NO*, *Sin Dis3*, *Sin Cefalea*, esencias florales y retiros *ERES*.
 - **Formulario & WhatsApp**: Enlace directo con mensaje preconfigurado para adquirir ejemplares o coordinar talleres en cualquier ciudad.
+
+---
+
+## 📬 Formulario de Contacto (Netlify Forms)
+
+El formulario de la sección **Contacto** usa **Netlify Forms**. El envío se hace por
+`fetch` (sin recargar la página) y muestra el toast de confirmación; si el envío
+falla, se ofrece un enlace `mailto:` ya prellenado para que el mensaje no se pierda.
+
+- Nombre del formulario: `contacto-florecimiento`
+- Campos: `nombre`, `email`, `interes`, `mensaje`
+- Anti-spam: honeypot `bot-field`
+
+> El campo del correo se llama `email` a propósito: Netlify usa ese nombre para
+> poner el **Reply-To** del aviso, así se puede responder al interesado
+> directamente desde el correo de notificación.
+
+### PASO 1 — Desplegar (obligatorio antes de todo lo demás)
+
+**Netlify detecta los formularios al desplegar, leyendo el HTML publicado.**
+Mientras no se despliegue el `index.html` con el formulario nuevo, la sección
+**Forms** aparecerá vacía y no habrá nada que configurar.
+
+Si el sitio está conectado a un repositorio:
+
+```bash
+git add .
+git commit -m "feat: formulario de contacto con Netlify Forms"
+git push
+```
+
+Si se despliega manualmente: **Deploys → Deploy manually** y arrastrar la carpeta
+del proyecto completa.
+
+Cuando termine el deploy, en **Forms** debe aparecer `contacto-florecimiento`.
+
+### PASO 2 — Activar el correo de notificación
+
+Netlify guarda los envíos, pero no los reenvía hasta configurar el aviso:
+
+1. **Project configuration** (menú izquierdo)
+2. **Notifications**
+3. **Emails and webhooks**
+4. En **Form submission notifications** → **Add notification** → **Email notification**
+5. *Email to notify*: `florecimientocerebral@gmail.com`
+6. *Form*: `contacto-florecimiento` → **Save**
+
+Enlace directo:
+`https://app.netlify.com/projects/florecimientocerebral/configuration/notifications#form-submission-notifications`
+
+A partir de ahí cada solicitud llega a ese correo y queda archivada en
+**Forms** dentro del panel de Netlify.
+
+> **Nota:** el formulario solo funciona en el sitio desplegado en Netlify. En
+> local (`node serve.js`) el envío no se registra; el formulario mostrará el
+> mensaje de respaldo con el enlace de correo directo.
+
+### Cambiar el correo de destino
+
+- Correo de las notificaciones: se cambia en el panel de Netlify (paso 5).
+- Correo del enlace de respaldo: constante `CONTACT_EMAIL` en `js/main.js`.
+
+---
+
+## 💬 Enlace de WhatsApp
+
+El botón *Contactar por WhatsApp Directo* apunta a `https://wa.me/docSERsol`.
+
+> **Importante:** `wa.me` normalmente requiere el **número de teléfono en formato
+> internacional sin signos** (por ejemplo `https://wa.me/573001234567`). Si el
+> usuario `@docSERsol` no está reclamado como nombre de usuario de WhatsApp, hay
+> que reemplazar `docSERsol` por el número en `index.html`.
