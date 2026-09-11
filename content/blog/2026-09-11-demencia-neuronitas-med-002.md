@@ -4,7 +4,7 @@ code: MED - 002
 date: 2026-09-11T11:00:00-05:00
 author: Dr. Pedro Hernán Pérez Estrada (docSERsol)
 category: Neuronitas
-image: ""
+image: https://res.cloudinary.com/kaiqn1tp/image/upload/v1789158330/NeuronitasBlog.png
 summary: En la demencia se altera la transmisión electroquímica neuronal en el
   Sistema Nervioso Central. ¿Qué ocurre cuando las neuronas entran en alerta y
   cómo identificar sus primeros síntomas?
