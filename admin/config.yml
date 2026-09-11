@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Local backend support for offline development (optional: npx decap-server)
+local_backend: false
+
+# Media & Uploads
+media_folder: "assets/img/blog"
+public_folder: "/assets/img/blog"
+
+# Display & branding in Decap UI
+site_url: "https://florecimientocerebral.com"
+logo_url: "https://res.cloudinary.com/kaiqn1tp/image/upload/v1788996435/logo.png"
+
+# Content Collections
+collections:
+  - name: "blog"
+    label: "Artículos del Blog"
+    label_singular: "Artículo"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Código / Referencia", name: "code", widget: "string", required: false, default: "MED - 002" }
+      - { label: "Fecha de Publicación", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "YYYY-MM-DD", time_format: "HH:mm" }
+      - { label: "Autor", name: "author", widget: "string", default: "Dr. Pedro Hernán Pérez Estrada (docSERsol)" }
+      - { label: "Categoría", name: "category", widget: "select", options: ["Neuronitas", "Demencia", "Neurociencia", "Medicina Integrativa", "Estilo de Vida", "Neurojuegos"], default: "Neuronitas" }
+      - { label: "Imagen de Portada / Cómic", name: "image", widget: "image", required: false }
+      - { label: "Resumen Corto", name: "summary", widget: "text", hint: "Breve descripción para la tarjeta del blog y buscadores" }
+      - { label: "Contenido del Artículo", name: "body", widget: "markdown" }

@@ -1,10 +1,19 @@
 const http=require('http'),fs=require('fs'),path=require('path'),url=require('url');
 const root=__dirname;
-const types={'.html':'text/html;charset=utf-8','.css':'text/css;charset=utf-8','.js':'text/javascript;charset=utf-8','.jpg':'image/jpeg','.png':'image/png','.svg':'image/svg+xml','.mp4':'video/mp4','.webp':'image/webp'};
+const types={'.html':'text/html;charset=utf-8','.css':'text/css;charset=utf-8','.js':'text/javascript;charset=utf-8','.json':'application/json;charset=utf-8','.yml':'text/yaml;charset=utf-8','.jpg':'image/jpeg','.png':'image/png','.svg':'image/svg+xml','.mp4':'video/mp4','.webp':'image/webp'};
 http.createServer((req,res)=>{
   let p=decodeURIComponent(url.parse(req.url).pathname);
   if(p==='/')p='/index.html';
-  const f=path.join(root,p);
+  if(p==='/config.yml')p='/admin/config.yml';
+  let f=path.join(root,p);
+  if(fs.existsSync(f)&&fs.statSync(f).isDirectory()){
+    if(!p.endsWith('/')){
+      res.writeHead(301,{'Location':p+'/'});
+      res.end();
+      return;
+    }
+    f=path.join(f,'index.html');
+  }
   fs.readFile(f,(e,d)=>{
     if(e){res.writeHead(404);res.end('404');return;}
     res.writeHead(200,{'Content-Type':types[path.extname(f).toLowerCase()]||'application/octet-stream','Cache-Control':'no-store'});

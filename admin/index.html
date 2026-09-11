@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administrador de Contenidos — Florecimiento Cerebral Siglo XXI</title>
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788996435/logo.png">
+  <!-- Explicit Decap CMS Config Path -->
+  <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url">
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    /* Custom Decap CMS styling to match brand aesthetic */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      background-color: #07090e;
+    }
+  </style>
+</head>
+<body>
+  <!-- Decap CMS Core -->
+  <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
+  <script>
+    // Netlify Identity login state handler
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.reload();
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

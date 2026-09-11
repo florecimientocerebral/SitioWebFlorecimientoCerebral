@@ -1,5 +1,6 @@
 # Netlify Configuration for Florecimiento Cerebral Landing Page
 [build]
+  command = "node scripts/build-blog.js"
   publish = "."
 
 # Caching for static assets (images, fonts, videos, scripts)

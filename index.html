@@ -30,6 +30,9 @@
   <link rel="stylesheet" href="css/style.css?v=5">
   <link rel="stylesheet" href="css/animations.css?v=5">
   <link rel="stylesheet" href="css/editorial.css?v=1">
+
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
@@ -90,6 +93,7 @@
           <li><a href="#servicios">5 Pilares &amp; Servicios</a></li>
           <li><a href="#autores">Autores</a></li>
           <li><a href="#neurojuegos">Neurojuegos</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li class="nav-cta-mobile"><a href="#contacto">Adquirir Obra</a></li>
         </ul>
       </nav>
@@ -925,6 +929,7 @@
             <li><a href="#filosofia">Razón vs. Instinto</a></li>
             <li><a href="#libro">El Libro</a></li>
             <li><a href="#video">Video</a></li>
+            <li><a href="blog.html">Neuro Blog</a></li>
           </ul>
         </div>
 
@@ -934,6 +939,7 @@
             <li><a href="#autores">docSERsol &amp; Neuro Tóxix</a></li>
             <li><a href="#neurojuegos">Neurojuegos</a></li>
             <li><a href="#contacto">Adquirir Obra</a></li>
+            <li><a href="/admin/">Acceso Autor (CMS)</a></li>
           </ul>
         </div>
 
@@ -969,6 +975,17 @@
   <!-- Scripts -->
   <script src="js/main.js"></script>
   <script src="js/neurogame.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>

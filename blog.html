@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Neuro Blog | Florecimiento Cerebral Siglo XXI</title>
+  <meta name="description"
+    content="Artículos, reflexiones clínicas y viñetas de Las Neuronitas sobre neurociencia, salud cognitiva y medicina integrativa por el Dr. Pedro Hernán Pérez Estrada (docSERsol).">
+  <meta name="author" content="Dr. Pedro Hernán Pérez Estrada (docSERsol)">
+
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:title" content="El Neuro Blog — Florecimiento Cerebral Siglo XXI">
+  <meta property="og:description"
+    content="Descubre los artículos y viñetas del Dr. Pedro Hernán Pérez Estrada y el Dr. Neuro Tóxix sobre salud mental y medicina integrativa.">
+  <meta property="og:image" content="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788966809/logo.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788996435/logo.png">
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788996435/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/animations.css?v=6">
+  <link rel="stylesheet" href="css/editorial.css?v=1">
+  <link rel="stylesheet" href="css/blog.css?v=2">
+
+  <!-- Netlify Identity Widget for CMS author auth -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+
+<body>
+
+  <!-- Inline SVG Icon Sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="i-brain"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"/></g>
+      <g id="i-book"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></g>
+      <g id="i-compass"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/></g>
+      <g id="i-bolt"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></g>
+      <g id="i-menu"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></g>
+      <g id="i-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></g>
+      <g id="i-send"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></g>
+      <g id="i-check"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="M22 4 12 14l-3-3"/></g>
+      <g id="i-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></g>
+      <g id="i-whatsapp" fill="currentColor" stroke="none"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.23-.64.08-.3-.15-1.26-.47-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.66-1.6-.91-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.7.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.34M12.05 21.8a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.89-9.89 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.15 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.44c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.49-8.4"/></g>
+    </defs>
+  </svg>
+
+  <!-- Neural Background Canvas -->
+  <canvas id="neural-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" title="Florecimiento Cerebral">
+        <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788996435/logo.png"
+          alt="Florecimiento Cerebral Emblema" class="brand-img">
+        <div class="brand-text">
+          <span class="brand-title"><span class="brand-bloom">FLORECIMIENTO</span> CEREBRAL</span>
+          <span class="brand-subtitle">Siglo XXI</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#filosofia">Razón vs. Instinto</a></li>
+          <li><a href="index.html#libro">El Libro</a></li>
+          <li><a href="index.html#servicios">5 Pilares &amp; Servicios</a></li>
+          <li><a href="index.html#autores">Autores</a></li>
+          <li><a href="index.html#neurojuegos">Neurojuegos</a></li>
+          <li><a href="blog.html" style="color:var(--color-pink);font-weight:700;">Blog</a></li>
+          <li class="nav-cta-mobile"><a href="index.html#contacto">Adquirir Obra</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html#contacto" class="btn btn-primary">Adquirir Obra</a>
+        <button class="mobile-toggle" aria-label="Abrir menú de navegación">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+      <div class="container">
+        <span class="blog-hero-badge">PUBLICACIONES &amp; DIVULGACIÓN</span>
+        <h1 class="blog-title">El Neuro Blog de las <span class="title-accent">NEURONITAS</span></h1>
+        <p class="blog-subtitle">
+          Reflexiones clínicas, viñetas de divulgación médica y herramientas neurocognitivas para el despertar integral en el Siglo XXI.
+        </p>
+
+        <!-- Search & Filter Controls -->
+        <div class="blog-filter-bar">
+          <div class="blog-search-box">
+            <svg class="ico blog-search-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-search"></use></svg>
+            <input type="text" id="blog-search-input" class="blog-search-input" placeholder="Buscar por tema, síntoma o código (ej. Demencia, MED-002)...">
+          </div>
+
+          <div class="blog-category-chips">
+            <button class="category-chip active" data-category="all">Todos</button>
+            <button class="category-chip" data-category="Neuronitas">Neuronitas</button>
+            <button class="category-chip" data-category="Demencia">Demencia</button>
+            <button class="category-chip" data-category="Neurociencia">Neurociencia</button>
+            <button class="category-chip" data-category="Medicina Integrativa">Medicina Integrativa</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Blog Cards Grid -->
+        <div class="blog-grid" id="blog-posts-grid">
+          <!-- Populated by js/blog.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer editorial-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <img src="https://res.cloudinary.com/kaiqn1tp/image/upload/v1788996435/logo.png"
+              alt="Logo Florecimiento Cerebral" class="brand-img brand-img-sm">
+            <div class="brand-text">
+              <span class="brand-title brand-title-sm"><span class="brand-bloom">FLORECIMIENTO</span> CEREBRAL</span>
+              <span class="brand-subtitle">Siglo XXI</span>
+            </div>
+          </div>
+          <p>
+            El siglo del cerebro ha llegado. Desarrolla tus capacidades latentes a través de la medicina integrativa, el
+            juego familiar y el humor transformador.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navegación</h5>
+          <ul class="footer-links">
+            <li><a href="index.html#inicio">Inicio</a></li>
+            <li><a href="index.html#filosofia">Razón vs. Instinto</a></li>
+            <li><a href="index.html#libro">El Libro</a></li>
+            <li><a href="blog.html">Neuro Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Ecosistema</h5>
+          <ul class="footer-links">
+            <li><a href="index.html#autores">docSERsol &amp; Neuro Tóxix</a></li>
+            <li><a href="index.html#neurojuegos">Neurojuegos</a></li>
+            <li><a href="index.html#contacto">Adquirir Obra</a></li>
+            <li><a href="/admin/">Acceso Autor (CMS)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Autores &amp; Editorial</h5>
+          <ul class="footer-links">
+            <li><a href="index.html#autores">Dr. Pedro Hernán Pérez</a></li>
+            <li><a href="index.html#autores">Dr. Neuro Tóxix (PDNT)</a></li>
+            <li><a href="index.html#libro">Editorial ibukku</a></li>
+            <li><a href="index.html#contacto">Talleres Nacionales</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Florecimiento Cerebral Siglo XXI • docSERsol &amp; Dr. Pedro Hernán Pérez Estrada. Todos los
+          derechos reservados.
+        </div>
+        <div>
+          Desarrollado con estándares web modernos para GitHub &amp; Netlify.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Notification Toast -->
+  <div id="toast-notification" class="toast-notice">
+    <span class="toast-mark"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"></use></svg></span>
+    <span id="toast-text">Notificación</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/blog.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
