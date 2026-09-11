@@ -1,11 +1,13 @@
 ---
 title: "El Neuro Blog de las NEURONITAS: DEMENCIA"
-code: "MED - 002"
+code: MED - 002
 date: 2026-09-11T11:00:00-05:00
-author: "Dr. Pedro Hernán Pérez Estrada (docSERsol)"
-category: "Neuronitas"
-image: "/assets/img/blog/neuronitas-demencia-med002.png"
-summary: "En la demencia se altera la transmisión electroquímica neuronal en el Sistema Nervioso Central. ¿Qué ocurre cuando las neuronas entran en alerta y cómo identificar sus primeros síntomas?"
+author: Dr. Pedro Hernán Pérez Estrada (docSERsol)
+category: Neuronitas
+image: ""
+summary: En la demencia se altera la transmisión electroquímica neuronal en el
+  Sistema Nervioso Central. ¿Qué ocurre cuando las neuronas entran en alerta y
+  cómo identificar sus primeros síntomas?
 ---
 
 ### El Paro Neuronal y la Alerta Sináptica
