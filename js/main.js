@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initVideoAuditorium();
   initScrollReveal();
   initContactForm();
+  initBuyModal();
 });
 
 /* ==========================================================================
@@ -281,6 +282,7 @@ function init3DTilt() {
    ========================================================================== */
 function initCognitiveDuel() {
   const buttons = document.querySelectorAll('.arena-btn');
+  if (!buttons.length) return;
   const quoteText = document.getElementById('arena-quote-text');
   const quoteSpeaker = document.getElementById('arena-speaker');
 
@@ -455,3 +457,46 @@ function initContactForm() {
     }
   });
 }
+
+/* ==========================================================================
+   8. BUY BOOK MODAL (DISTRIBUTION SELECTOR)
+   ========================================================================== */
+function initBuyModal() {
+  const modal = document.getElementById('buy-modal');
+  if (!modal) return;
+
+  const openButtons = document.querySelectorAll('.btn-open-buy-modal, [data-open-buy-modal]');
+  const closeTriggers = modal.querySelectorAll('[data-close-modal]');
+
+  function openModal(e) {
+    if (e) e.preventDefault();
+    modal.removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+    
+    // Accessibility: focus first retailer card
+    setTimeout(() => {
+      const firstLink = modal.querySelector('.retailer-card');
+      if (firstLink) firstLink.focus();
+    }, 60);
+  }
+
+  function closeModal() {
+    modal.setAttribute('hidden', '');
+    document.body.style.overflow = '';
+  }
+
+  openButtons.forEach(btn => {
+    btn.addEventListener('click', openModal);
+  });
+
+  closeTriggers.forEach(el => {
+    el.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hasAttribute('hidden')) {
+      closeModal();
+    }
+  });
+}
+

@@ -123,7 +123,7 @@
       <div class="container hero-grid">
         <div class="hero-content reveal">
           <div class="hero-editorial-badge">
-            UN VIAJE HACIA LA SALUD MENTAL Y EL BIENESTAR INTEGRAL
+            UN VIAJE HACIA EL PODER MENTAL Y LA SALUD CEREBRAL
           </div>
 
           <h1 class="hero-editorial-title">
@@ -133,12 +133,14 @@
           </h1>
 
           <p class="hero-editorial-desc">
-            Un enfoque moderno y profundo sobre cómo cuidar tu cerebro, potenciar tu salud mental
-            y alcanzar una vida plena en el siglo XXI. La obra cumbre del <strong>Dr. Pedro Hernán Pérez Estrada (docSERsol)</strong> y el <strong>Dr. Neuro Tóxix</strong>.
+            Un enfoque moderno y profundo sobre cómo cuidar tu cerebro y alcanzar una vida plena
+            en el siglo XXI. La obra cumbre del <strong>Dr. Pedro Hernán Pérez Estrada (docSERsol)</strong> y el <strong>Dr. Neuro Tóxix</strong>.
           </p>
 
           <div class="hero-editorial-actions">
-            <a href="#libro" class="btn btn-editorial-white">Comprar ahora &rarr;</a>
+            <button type="button" class="btn btn-editorial-white btn-open-buy-modal" id="hero-buy-btn" aria-haspopup="dialog">
+              Comprar ahora &rarr;
+            </button>
             <a href="#filosofia" class="btn btn-editorial-ghost">Ver más</a>
           </div>
 
@@ -209,7 +211,7 @@
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"/></svg>
               </div>
               <h4 class="pillar-strip-title">CIENCIA Y BIENESTAR</h4>
-              <p class="pillar-strip-text">Una mirada actual y accesible al funcionamiento del cerebro y la salud mental.</p>
+              <p class="pillar-strip-text">Una mirada actual y accesible al funcionamiento del cerebro</p>
             </div>
 
             <div class="pillar-strip-item">
@@ -217,7 +219,7 @@
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
               </div>
               <h4 class="pillar-strip-title">HÁBITOS QUE TRANSFORMAN</h4>
-              <p class="pillar-strip-text">Estrategias prácticas para mejorar tu enfoque, energía y equilibrio emocional.</p>
+              <p class="pillar-strip-text">Estrategias prácticas para mejorar tu enfoque, energía y equilibrio sentimental</p>
             </div>
 
             <div class="pillar-strip-item">
@@ -290,7 +292,7 @@
 
             <ul class="duel-traits">
               <li><span class="icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-microscope"></use></svg></span> Medicina Integrativa con sólida evidencia neurocientífica</li>
-              <li><span class="icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-leaf"></use></svg></span> Terapias de recuperación, neuroplasticidad y empatía activa</li>
+              <li><span class="icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-leaf"></use></svg></span> Técnicas de recuperación y neuroflexibilidad</li>
               <li><span class="icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-compass"></use></svg></span> Guía asistencial en el proceso "El Laberinto del Subconsciente"</li>
               <li><span class="icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mountain"></use></svg></span> Creador y facilitador del programa de Retiros ERES</li>
             </ul>
@@ -322,22 +324,6 @@
           </div>
         </div>
 
-        <!-- Interactive Cognitive Duel Arena -->
-        <div class="quote-arena reveal reveal-delay-3">
-          <h3 class="arena-title">Intercambio Dialéctico: Pulsa para escuchar a cada autor</h3>
-          <div class="arena-controls">
-            <button class="arena-btn active" data-side="docser">Voz de docSERsol</button>
-            <button class="arena-btn" data-side="toxix">Voz del Dr. Neuro Tóxix</button>
-          </div>
-          <div class="arena-output">
-            <p id="arena-quote-text" class="arena-quote-text">
-              “Estamos en el siglo del cerebro. Su estudio, desarrollo y sanación consciente son la base indispensable
-              para un futuro prometedor y armónico de la humanidad.”
-            </p>
-            <span id="arena-speaker" class="arena-speaker" style="color: var(--color-cyan);">docSERsol — Médico
-              Integrativo</span>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -377,7 +363,7 @@
             </p>
             <p class="book-synopsis">
               Esta obra no es un tratado frío ni un libro de autoayuda genérico: es un <strong>manual de viaje
-                neurocientífico y vivencial</strong>. A través de diálogos chispeantes entre <strong>docSERsol</strong>
+                neurocientífico y vivencial</strong>. A través de intervenciones chispeantes entre <strong>docSERsol</strong>
               y el disruptivo <strong>Dr. Neuro Tóxix</strong>, descubrirás cómo regenerar tus circuitos cerebrales,
               despertar capacidades latentes y tomar el mando definitivo de tu destino biológico y mental.
             </p>
@@ -392,7 +378,7 @@
 
               <div class="pillar-card">
                 <div class="pillar-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bolt"></use></svg></div>
-                <div class="pillar-title">Neuroplasticidad Viva</div>
+                <div class="pillar-title">Neuroadaptabilidad Viva</div>
                 <div class="pillar-desc">Herramientas prácticas para restaurar sinapsis, afinar la cognición y
                   reconfigurar viejos condicionamientos.</div>
               </div>
@@ -407,8 +393,7 @@
               <div class="pillar-card">
                 <div class="pillar-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-flask"></use></svg></div>
                 <div class="pillar-title">Molécula PDNT &amp; Humor</div>
-                <div class="pillar-desc">El antídoto contra la rigidez mental: aprender de neurociencia riéndose a
-                  carcajadas con Dr. Neuro Tóxix.</div>
+                <div class="pillar-desc">El antídoto contra la rigidez mental: aprender de neurociencia riéndose con Dr. Neuro Tóxix.</div>
               </div>
             </div>
 
@@ -420,7 +405,7 @@
                   <div style="font-size: 0.8rem; color: var(--text-muted);">Disponible en Edición Física &amp; Electrónica</div>
                 </div>
               </div>
-              <a href="#contacto" class="btn btn-primary">Adquirir Obra</a>
+              <button type="button" class="btn btn-primary btn-open-buy-modal" aria-haspopup="dialog">Adquirir Obra</button>
             </div>
           </div>
         </div>
@@ -470,7 +455,7 @@
               </p>
               <ul class="service-bullets">
                 <li>Velocidad psicomotora, reacción y control inhibitorio</li>
-                <li>Entrenamiento de funciones ejecutivas y planeación</li>
+                <li>Entrenamiento de funciones mentales superiores</li>
                 <li>Interacción activa y risa compartida sin pantallas</li>
               </ul>
             </div>
@@ -484,10 +469,10 @@
               <div class="service-badge">Speaker &amp; Facilitador</div>
               <h3 class="service-title">Conferencista y Tallerista en Neurociencia</h3>
               <p class="service-text">
-                Servicios como conferencista —speaker— y tallerista en neurociencia aplicada para empresas, congresos, universidades y colegios. Productor y facilitador del célebre taller vivencial <strong>"Cerebro &amp; Corazón &amp; Vida"</strong> impartido en las 20 principales ciudades de Colombia y Latinoamérica.
+                Servicios como conferencista —speaker— y tallerista en neurociencia aplicada para empresas, congresos, universidades y colegios. Productor y facilitador del célebre taller vivencial <strong>"Cerebro &amp; Corazón &amp; Vida"</strong> impartido en las 20 principales ciudades de Colombia.
               </p>
               <ul class="service-bullets">
-                <li>Conferencias magistrales de neurociencia cotidiana</li>
+                <li>Charlas magistrales de neurociencia cotidiana</li>
                 <li>Talleres vivenciales de alto impacto y cohesión</li>
                 <li>Formación y diplomaturas en neurodesarrollo</li>
               </ul>
@@ -499,14 +484,13 @@
           <div class="service-card reveal">
             <div class="service-num">04</div>
             <div>
-              <div class="service-badge">Acompañamiento Clínico</div>
+              <div class="service-badge">Acompañamiento</div>
               <h3 class="service-title">Consultoría, Asistencia y Guía Personal</h3>
               <p class="service-text">
-                Acompañamiento clínico y guía personalizada en procesos individuales donde la neurociencia aporta soluciones profundas: estrés, déficits cognitivos, ansiedad, depresión, desadaptabilidad y preparación ante retos vitales de cualquier índole.
+                Acompañamiento y guía personalizada en procesos individuales donde la neurociencia aporta soluciones profundas: estrés, déficits cognitivos, ansiedad, depresión, desadaptabilidad y preparación ante retos vitales de cualquier índole.
               </p>
               <ul class="service-bullets">
-                <li>Consultas virtuales y presenciales personalizadas</li>
-                <li>Fórmulas magistrales cerebrales integrativas</li>
+                <li>Consultas virtuales y presenciales</li>
                 <li>Proceso asistencial "El Laberinto del Subconsciente"</li>
               </ul>
             </div>
@@ -518,7 +502,7 @@
             <div class="service-num">05</div>
             <div>
               <div class="service-badge">Inmersión Exclusiva</div>
-              <h3 class="service-title">Programa ERES — Retiro Especial de Sanación</h3>
+              <h3 class="service-title">Programa ERES</h3>
               <p class="service-text">
                 <strong>Espacio para un Retiro Especial de Sanación (ERES)</strong>: inmersión terapéutica entre 1 y 3 días para grupos selectos de 1 a 5 personas con intereses semejantes, guiado directamente por el Dr. Pedro Hernán Pérez Estrada para iniciar un proceso de transformación personal con nuevos recursos vitales para una existencia mejor y más productiva.
               </p>
@@ -599,7 +583,7 @@
               Convencido de que estamos en el siglo del cerebro y de que su estudio, cuidado, desarrollo y recuperación son la base de un futuro prometedor para la humanidad, donde el humano del siglo XXI desarrollará o recuperará capacidades mentales latentes que le desbordarán en una vida y convivencia armoniosa.
             </p>
             <p class="author-bio-text">
-              Es creador de múltiples propuestas y desarrollos en torno a la neurociencia aplicada: autor de varios libros, cursos y seminarios; de las historietas <strong>Neuronitas</strong> que apoyan y complementan divertidamente esta obra; del <strong>Endulzante Sónico Lumínico</strong> y del <strong>Analgésico Sónico Lumínico</strong>; de los neurojuegos <em>Neuro Cuadri Color</em> y <em>Enloquézcase de la Risa</em>; de <em>Flor-Esencia Home</em>, de <em>Mascota Floral</em> y de fórmulas magistrales cerebrales; productor y docente en <strong>tres diplomaturas en neurociencia</strong>; productor y guía asistencial del proceso de sanación <em>El Laberinto del Subconsciente</em>; creador, guía y facilitador de <strong>ERES</strong> (Espacio para un Retiro Especial de Sanación); y creador del coautor de este libro: el Dr. Neuro Tóxix.
+              Es creador de múltiples propuestas y desarrollos en torno a la neurociencia aplicada: autor de varios libros, cursos y seminarios; de las historietas <strong>Neuronitas</strong> que apoyan y complementan divertidamente esta obra; de los neurojuegos <em>Neuro Cuadri Color</em> y <em>Enloquézcase de la Risa</em>; de <em>Flor-Esencia Home</em>, de <em>Mascota Floral</em> y de fórmulas magistrales cerebrales; productor y docente en <strong>tres diplomaturas en neurociencia</strong>; productor y guía asistencial del proceso de sanación <em>El Laberinto del Subconsciente</em>; creador, guía y facilitador de <strong>ERES</strong> (Espacio para un Retiro Especial de Sanación); y creador del coautor de este libro: el Dr. Neuro Tóxix.
             </p>
 
             <div class="achievements-grid">
@@ -650,7 +634,7 @@
             <div class="badge badge-purple" style="margin-bottom: 0.8rem;">Compromiso Vital</div>
             <h3 class="vision-title">Visión del Autor</h3>
             <p style="font-size: 0.95rem; color: var(--text-muted);">
-              Los cuatro propósitos esenciales que guían la misión médica y divulgativa del Dr. Pedro Hernán Pérez Estrada:
+              Los cuatro propósitos esenciales que guían la misión neurocientífica y divulgativa del Dr. Pedro Hernán Pérez Estrada:
             </p>
           </div>
 
@@ -659,7 +643,7 @@
               <div class="vision-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-brain"></use></svg></div>
               <h4 class="vision-item-title">Conocimiento Práctico de Vida</h4>
               <p class="vision-item-text">
-                Ofrecer conocimientos prácticos de la neurociencia cotidiana para lidiar contra las presiones, el distrés, el agotamiento, la depresión y la angustia existencial.
+                Ofrecer conocimientos prácticos de la neurociencia cotidiana para lidiar contra las presiones, el distrés, el agotamiento, la ansiedad y la angustia existencial.
               </p>
             </div>
 
@@ -698,7 +682,7 @@
       <div class="container">
         <div class="section-header reveal">
           <div class="badge badge-amber">Gimnasia Mental Familiar</div>
-          <h2 class="section-title">Neurojuegos: <span class="highlight-cyan">Entrena tu Mente Riendo</span></h2>
+          <h2 class="section-title">Neurojuegos</h2>
           <p class="section-subtitle">
             Aptos para todas las edades. Sana y entretenida diversión para tu familia, escuela o grupo de amigos con
             base en neuroplasticidad activa.
@@ -756,7 +740,7 @@
             <div class="badge badge-cyan" style="margin-bottom: 0.8rem;">Demo Interactiva en Vivo</div>
             <h3>Neuro-Desafío de Reflejos Sinápticos</h3>
             <p>Prueba tu velocidad de procesamiento y control inhibitorio. Haz clic rápidamente en el cuadrante del
-              color que se te indica en pantalla.</p>
+              color que se te indica en pantalla, haciendo caso omiso de la palabra, y solo haciendo click de acuerdo al color de la letra.</p>
           </div>
 
           <div class="game-scoreboard">
@@ -822,7 +806,7 @@
                 <div class="channel-icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"></use></svg></div>
                 <div>
                   <div class="channel-text-title">WhatsApp Oficial</div>
-                  <div class="channel-text-val">Atención Personalizada para Envíos y Talleres</div>
+                  <div class="channel-text-val">Servicio especializado para envíos y talleres</div>
                 </div>
               </div>
 
@@ -965,6 +949,117 @@
       </div>
     </div>
   </footer>
+
+  <!-- ==========================================
+       BUY BOOK OPTIONS MODAL (EDITORIAL RETAILERS)
+       ========================================== -->
+  <div id="buy-modal" class="buy-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="buy-modal-title" hidden>
+    <div class="buy-modal-backdrop" data-close-modal></div>
+    <div class="buy-modal-card">
+      <button type="button" class="buy-modal-close" data-close-modal aria-label="Cerrar ventana">
+        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="buy-modal-header">
+        <span class="buy-modal-badge">Puntos de Venta Autorizados</span>
+        <h3 id="buy-modal-title" class="buy-modal-title">Adquirir Florecimiento Cerebral Siglo XXI</h3>
+        <p class="buy-modal-desc">
+          Elige tu librería o distribuidor de preferencia para ordenar la obra en formato físico o digital:
+        </p>
+      </div>
+
+      <div class="buy-retailers-grid">
+        <!-- Amazon -->
+        <a href="https://www.amazon.com/-/es/FLORECIMIENTO-CEREBRAL-SIGLO-XXI-Spanish/dp/B0H14JHCLK"
+           target="_blank" rel="noopener noreferrer" class="retailer-card retailer-amazon">
+          <div class="retailer-icon-wrap">
+            <svg class="retailer-brand-icon" viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+              <path d="M15.54 13.08c-.12.16-.3.26-.49.28-.2.01-.4-.06-.55-.19-.88-.74-1.99-1.15-3.14-1.15-1.57 0-3.03.74-3.95 1.99-.13.18-.34.28-.56.27-.22-.01-.42-.13-.53-.32-.23-.39-.1-.89.29-1.12 1.18-1.59 3.03-2.52 5.01-2.52 1.45 0 2.85.51 3.96 1.44.38.31.44.87.13 1.25zM21.72 17.65c-2.4 1.8-5.46 2.76-8.5 2.76-4.28 0-8.24-1.87-10.9-5.11-.2-.25-.17-.61.08-.81.24-.2.61-.17.81.08 2.45 2.99 6.1 4.71 10.01 4.71 2.81 0 5.62-.89 7.84-2.55.27-.2.65-.15.86.11.2.27.15.65-.11.86zm1.3-1.63c-.15.34-.49.56-.86.54l-2.61-.12c-.28-.01-.52-.2-.59-.47-.07-.27.05-.56.29-.7l2.06-1.22c.24-.14.54-.12.76.06.22.18.3.48.21.75l-.26 1.16z"/>
+            </svg>
+          </div>
+          <div class="retailer-info">
+            <div class="retailer-name-row">
+              <span class="retailer-name">Amazon</span>
+              <span class="retailer-tag">Internacional</span>
+            </div>
+            <p class="retailer-sub">Edición física (tapa blanda) &amp; versión digital Kindle con envío global.</p>
+          </div>
+          <span class="retailer-action-btn">
+            Comprar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </span>
+        </a>
+
+        <!-- Books-A-Million -->
+        <a href="https://www.booksamillion.com/product/9798897274604"
+           target="_blank" rel="noopener noreferrer" class="retailer-card retailer-bam">
+          <div class="retailer-icon-wrap">
+            <svg class="retailer-brand-icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              <line x1="9" y1="7" x2="15" y2="7"/>
+              <line x1="9" y1="11" x2="15" y2="11"/>
+            </svg>
+          </div>
+          <div class="retailer-info">
+            <div class="retailer-name-row">
+              <span class="retailer-name">Books-A-Million</span>
+              <span class="retailer-tag">EE. UU.</span>
+            </div>
+            <p class="retailer-sub">Red de librerías BAM! Pedidos para Estados Unidos y envíos internacionales.</p>
+          </div>
+          <span class="retailer-action-btn">
+            Comprar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </span>
+        </a>
+
+        <!-- Librerías Gandhi -->
+        <a href="https://www.gandhi.com.mx/florecimiento-cerebral-siglo-xxi-9798897274604/p"
+           target="_blank" rel="noopener noreferrer" class="retailer-card retailer-gandhi">
+          <div class="retailer-icon-wrap">
+            <svg class="retailer-brand-icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <div class="retailer-info">
+            <div class="retailer-name-row">
+              <span class="retailer-name">Librerías Gandhi</span>
+              <span class="retailer-tag">México</span>
+            </div>
+            <p class="retailer-sub">Librería líder en México. Envíos nacionales en edición física y digital.</p>
+          </div>
+          <span class="retailer-action-btn">
+            Comprar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </span>
+        </a>
+
+        <!-- Google Books -->
+        <a href="https://books.google.com.co/books/about/Florecimiento_Cerebral_Siglo_XXI.html?id=GUkS0gEACAAJ&redir_esc=y"
+           target="_blank" rel="noopener noreferrer" class="retailer-card retailer-google">
+          <div class="retailer-icon-wrap">
+            <svg class="retailer-brand-icon" viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.93V18c0 .55-.45 1-1 1s-1-.45-1-1v-1.07c-2.83-.48-5-2.94-5-5.93 0-.55.45-1 1-1s1 .45 1 1c0 2.21 1.79 4 4 4s4-1.79 4-4c0-.55.45-1 1-1s1 .45 1 1c0 2.99-2.17 5.45-5 5.93zM12 4c2.21 0 4 1.79 4 4 0 .55-.45 1-1 1s-1-.45-1-1c0-1.1-.9-2-2-2s-2 .9-2 2c0 .55-.45 1-1 1s-1-.45-1-1c0-2.21 1.79-4 4-4z"/>
+            </svg>
+          </div>
+          <div class="retailer-info">
+            <div class="retailer-name-row">
+              <span class="retailer-name">Google Books</span>
+              <span class="retailer-tag">Google Play</span>
+            </div>
+            <p class="retailer-sub">Ficha oficial, referencias bibliográficas y opciones de compra digital en Google Play.</p>
+          </div>
+          <span class="retailer-action-btn">
+            Explorar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="buy-modal-footer">
+        <span class="footer-dist-label">Publicación oficial distribuida por <strong>Editorial ibukku</strong>.</span>
+        <span class="footer-dist-help">¿Deseas pedidos especiales o institucionales? <a href="#contacto" data-close-modal>Contáctanos directamente</a></span>
+      </div>
+    </div>
+  </div>
 
   <!-- Notification Toast -->
   <div id="toast-notification" class="toast-notice">
