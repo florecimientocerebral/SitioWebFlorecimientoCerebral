@@ -29,6 +29,7 @@
 
     // Blockquotes
     html = html.replace(/^\> (.*$)/gm, '<blockquote><p>$1</p></blockquote>');
+    html = html.replace(/<\/blockquote>\s*<blockquote>/g, '');
 
     // Bold & Italics
     html = html.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');

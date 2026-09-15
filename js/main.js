@@ -473,6 +473,9 @@ function initBuyModal() {
     modal.removeAttribute('hidden');
     document.body.style.overflow = 'hidden';
     
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks) navLinks.classList.remove('mobile-open');
+
     // Accessibility: focus first retailer card
     setTimeout(() => {
       const firstLink = modal.querySelector('.retailer-card');
@@ -498,5 +501,10 @@ function initBuyModal() {
       closeModal();
     }
   });
+
+  // Open automatically if linked with hash #comprar or #comprar-modal
+  if (window.location.hash === '#comprar' || window.location.hash === '#comprar-modal') {
+    setTimeout(openModal, 150);
+  }
 }
 
