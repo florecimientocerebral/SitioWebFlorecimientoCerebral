@@ -63,9 +63,8 @@ git push -u origin main
 - **Canvas de Redes Neuronales**: Fondo interactivo de sinapsis que reacciona a la posición del cursor.
 - **Duelo Cognitivo: Razón vs. Instinto**: Selector interactivo entre **docSERsol** (médico integrativo) y el excéntrico **Dr. Neuro Tóxix** (viajero en el tiempo con su pterodáctilo de Solnhofen).
 - **El Libro & Portada 3D**: Presentación de las historietas *Neuronitas*, *El Laberinto del Subconsciente* y el sello de *Editorial ibukku*.
-- **Sala Audiovisual**: Reproductor HTML5 optimizado para el video oficial `FlorecimientoCerebralVideo.mp4`.
+- **Sala Audiovisual**: Reproductor HTML5 optimizado para el video oficial `VideoDoc.mp4`.
 - **Neuro-Desafío en el Navegador**: Mini-juego real inspirado en *Neuro-Cuadri-Color™* con síntesis de sonido Web Audio API, cronómetro de milisegundos, rachas y diagnóstico cerebral dinámico.
-- **Fórmulas Magistrales**: Catálogo visual interactivo de *Juventud Cerebral*, *Insom-NO*, *Sin Dis3*, *Sin Cefalea*, esencias florales y retiros *ERES*.
 - **Formulario & WhatsApp**: Enlace directo con mensaje preconfigurado para adquirir ejemplares o coordinar talleres en cualquier ciudad.
 
 ---
